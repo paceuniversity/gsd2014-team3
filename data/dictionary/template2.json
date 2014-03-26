@@ -1,0 +1,8 @@
+{
+  "category": "Greetings",
+  "data": [
+    {"english": "hello", "kiswahili": "hujambo", "type": "salutation", "img": "/assets/img/bb0I.jpg", "mp3": "/assets/mp3/bb0I.mp3"},
+    {"english": "good morning", "kiswahili": "nzuri asubuhi", "type": "salutation", "img": "/assets/img/jlz0.png", "mp3": "/assets/mp3/jlz0.mp3"},
+    {"english": "it's nice to meet you", "kiswahili": "Ni vyema kukutana na wewe", "type": "salutation", "img": "/assets/img/2je3B.png", "mp3": "/assets/mp3/2je3B.mp3"}
+  ]
+}
