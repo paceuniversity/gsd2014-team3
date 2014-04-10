@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+<script src="lib/jquery/jquery-1.10.2.min.js"></script>
+<script src="lib/jquery/jquery.mobile.custom.min.js"></script>
+
+<script id="panel-init">
+var panel = '<div data-role="panel" id="mypanel" data-position="right" data-display="push"><h1>Panel</h1><p>stuff</p></div>';
+
+$(document).one('pagebeforecreate', function () {
+  $.mobile.pageContainer.prepend(panel);
+  $("#mypanel").panel();
+});
+</script>
+</head>
+<body>
+
+
+<div data-role="page" id="pageone">
+	<div data-role="header" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="index.html" role="button" data-icon="search">Main</a></li>  
+				<li><a href="#" role="button" data-icon="bars"  class="ui-btn-active" data-transition="fade">Dictionary</a></li>
+				<li><a href="quiz.html" role="button" data-icon="user">Quizzes</a></li>
+				<li><a href="progress.html" role="button" data-icon="check">My Progress</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div data-role="content">
+		 <h1>contents</h1>
+	 <a data-role="button" href="quiz.html">quiz</a>
+
+	    </div>
+	    <!-- footer -->
+	    <div data-role="footer">
+		 <h1>Footer</h1>
+
+	    </div>
+	</div>
+</div> 
+
+
+</body>
+</html>
+
