@@ -1,41 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
-<script src="lib/jquery/jquery-1.10.2.min.js"></script>
-<script src="lib/jquery/jquery.mobile.custom.min.js"></script>
+<script src="/jquery-1.10.2.min.js"></script>
+<script src="assets/js/jquery.mobile.custom.min.js"></script>
 
 <script id="panel-init">
-	$(function() {
-		$( "body>[data-role='panel']" ).panel();
-	});
+$(function() {
+	var multimediaHeight = screen.height
+		- $("div[data-role=header]").height()
+		- $("#multiplechoicePanel").height();
+	console.log(multimediaHeight);
+	$("#multimediaPanel").height(multimediaHeight);
+});
 </script>
+<style type="text/css">
+.ui-content { padding: 0px; }
+
+#multiplechoicePanel {
+	background:#000;
+	color:#fff;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+#multimediaPanel {
+	background: red;
+	padding: 10px;
+}
+
+#multimediaPanel img {
+	width: 100%;
+}
+
+#multimediaPanel .caption {
+	background: #fff;
+	padding: 10px;
+	margin-top: 6px;
+}
+
+	.my-breakpoint.ui-grid-b .ui-block-a,
+	.my-breakpoint.ui-grid-b .ui-block-b, 
+	.my-breakpoint.ui-grid-b .ui-block-c { width: 42%; }
+	.my-breakpoint.ui-grid-b .ui-block-a { clear: left; }
+.my-breakpoint.ui-grid-b .ui-block-b {
+	text-align: center;
+	vertical-align: middle;
+	width: 16%;
+	padding-top: 20px;
+}
+	.hint-icon {
+	background: url('assets/img/hint-icon.png');
+	width: 48px;
+	height: 48px;
+	display: block;
+	vertical-align: middle;
+	}
+</style>
 </head>
 <body>
 
 
 <div data-role="page" id="pageone">
-	<div data-role="header" data-position="fixed">
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#" data-icon="search" class="ui-btn-active">Main</a></li>  
-				<li><a href="dictionary.html" data-icon="bars" data-transition="fade">Dictionary</a></li>
-				<li><a href="#" data-icon="user">Quizzes</a></li>
-				<li><a href="#" data-icon="edit">Sentence Writing</a></li>
-				<li><a href="#" data-icon="check">My Progress</a></li>
-			</ul>
-		</div>
+	<div data-role="header" data-theme="a" data-position="fixed">
+		<a href="#calendar" data-icon="home" data-iconpos="notext" class="ui-btn-left jqm-home">Home</a>
+		<h1>Lesson 12 Quiz</h1>
+		<a href="#calendar" data-icon="home" data-iconpos="notext" class="ui-btn-right jqm-home">Home</a>
 	</div>
 
 	<div data-role="main" class="ui-content">
-		<p>stuff</p>
+		<div id="multimediaPanel">
+			<img src="assets/img/placeholder.png" alt="" />
+			<div class="ui-corner-all ui-mini caption">
+				Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+			</div>
+		</div>
+		<div id="multiplechoicePanel">
+			<div class="ui-grid-b my-breakpoint">
+				<div class="ui-block-a">
+					<a href="index.html" data-role="button" data-mini="true">Onomotopoeia</a>
+					<a href="index.html" data-role="button" data-mini="true">Link</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="#" class="hint-icon"></a>
+				</div>
+				<div class="ui-block-c">
+					<a href="index.html" data-role="button" data-mini="true">Link</a>
+					<a href="index.html" data-role="button" data-mini="true">Link</a>
+				</div>
+			</div><!-- /grid-b -->
+		</div>
 	</div>
+</div>
 
-	<div data-role="footer">
-		<h1>footer</h1>
-	</div>
-</div> 
 
 
 </body>
