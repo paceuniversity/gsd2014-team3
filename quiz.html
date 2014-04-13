@@ -25,6 +25,14 @@ $(function() {
 	else
 		$("#sentencewritingPanel").show();
 		
+	if(mediaType == "video") {
+		// picture w/caption
+	} else if(mediaType == "image") {
+		// picture w/caption
+	} else {
+		// presumably the avatar will speak to user
+	}
+		
 	// set up dialog
 	$("a[data-rel=dialog]").click(function() {
 		$("#dialog").dialog();
