@@ -5,7 +5,7 @@ A mobile app that helps students proactively learn the language outside of the c
 Testing Environment
 ===================
 
-For development, you should be using Google Chrome to emulate mobile browsers. To do this, hit <kbd>CTRL</kbd>+<kbd>Z</kbd>, then go to Emulation > (Select any device) and click Emulate.
+For development, you should be using Google Chrome to emulate mobile browsers. To do this, hit <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>, then go to Emulation > (Select any device) and click Emulate.
 
 Appearance
 ==========
