@@ -1,78 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0">
-<link rel="stylesheet" href="assets/css/jquery.mobile.custom.theme.min.css">
-<link rel="stylesheet" href="assets/css/jquery.mobile.custom.structure.min.css">
-<link rel="stylesheet" href="assets/css/quiz.css">
-<script src="assets/js/jquery-1.10.2.min.js"></script>
-<script src="assets/js/jquery.mobile.custom.min.js"></script>
-
-<script id="panel-init">
-var videoPlayer;
-
-$(function() {
-	// set height of multimedia panel to fit screen
-	var multimediaHeight = screen.height
-		- $("div[data-role=header]").height()
-		- $("#multiplechoicePanel").height();
-	$("#multimediaPanel").height(multimediaHeight);
-	
-	// TBD: get json data from json
-	
-	var correctAnswer = "d";
-	var isMultipleChoiceMode = true;
-	var caption = "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.";
-	var mediaType = "video";
-	var videoFile = "test.mp4";
-	var videoExt = videoFile.split(".");
-	var videoSize = "1280x720";
-	
-	if(isMultipleChoiceMode)
-		$("#multiplechoicePanel").show();
-	else
-		$("#sentencewritingPanel").show();
-		
-	if(mediaType == "video") { // TBD: add support for play/replay and touch-to-play/pause features
-		// a video will play for the user
-		videoPlayer = $("<video></video>");
-		videoPlayer.attr("autoplay", "true");
-		sourceFile = $("<source>");
-		sourceFile.attr("src", 'data/media/' + videoFile);
-		sourceFile.attr("type", 'video/' + videoExt[videoExt.length-1]);
-		
-		videoPlayer.append(sourceFile);
-		$(".media-container").append(videoPlayer);
-		
-		// force video to fit in container while maintaining aspect ratio
-		videoSize = videoSize.split("x");
-		videoPlayer.width($(".media-container").width());
-		videoPlayer.height(($(".media-container").width() / videoSize[0]) * videoSize[1]);
-		
-		// vertically-align the video player
-		videoPlayer.css("margin-top", Math.ceil((($(".media-container").width() - videoPlayer.height()) / 2))  + "px");
-	} else if(mediaType == "image") {
-		// display an image as the media
-	} else {
-		// avatar will speak to user
-	}
-	
-	// resize the height of the media container to be a square
-	$(".media-container").height($(".media-container").width());
-	
-	// show caption if defined
-	if(caption != undefined)
-		$(".caption").html(caption).show();
-	
-	// set up dialog
-	$("a[data-rel=dialog]").click(function() {
-		$("#dialog").dialog();
-	});
-});
-</script>
+	<meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0">
+	<link rel="stylesheet" href="assets/css/jquery.mobile.custom.theme.min.css">
+	<link rel="stylesheet" href="assets/css/jquery.mobile.custom.structure.min.css">
+	<link rel="stylesheet" href="assets/css/quiz.css">
+	<script src="assets/js/jquery-1.10.2.min.js"></script>
+	<script src="assets/js/jquery.mobile.custom.min.js"></script>
+	<script src="assets/js/quiz.js" id="panel-init"></script>
 </head>
-<body>
 
+<body>
 
 <div data-role="page" id="pageone">
 	<div data-role="header" data-theme="a" data-position="fixed">
@@ -125,20 +63,20 @@ $(function() {
 		<div data-role="popup" id="popupAnswer" data-overlay-theme="b" data-theme="a">
 			<p>Correct! or not...</p>
 		</div>
-</div>
-
-<!-- Begin hint dialog -->
-<div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="a" class="ui-corner-all">
-	<div data-role="header" data-theme="d" class="ui-corner-top">
-		<h1>Hint</h1>
 	</div>
-	<div data-role="content" data-theme="d" style="padding:15px;" class="ui-corner-bottom">
-		<p>Here's your hint! Here's your hint! Here's your hint! Here's your hint! Here's your hint! </p>
-		<a href="docs-dialogs.html" data-role="button" data-rel="back" data-theme="b">Ok, got it!</a> 
-	</div>
-</div>
-<!-- End hint dialog -->
 
+	<!-- Begin hint dialog -->
+	<div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="a" class="ui-corner-all">
+		<div data-role="header" data-theme="d" class="ui-corner-top">
+			<h1>Hint</h1>
+		</div>
+		<div data-role="content" data-theme="d" style="padding:15px;" class="ui-corner-bottom">
+			<p>Here's your hint! Here's your hint! Here's your hint! Here's your hint! Here's your hint! </p>
+			<a href="docs-dialogs.html" data-role="button" data-rel="back" data-theme="b">Ok, got it!</a> 
+		</div>
+	</div>
+	<!-- End hint dialog -->
+</div>
 
 </body>
 </html>
