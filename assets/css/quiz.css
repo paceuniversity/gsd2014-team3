@@ -1,0 +1,58 @@
+.ui-content { padding: 0px; }
+
+#sentencewritingPanel, #multiplechoicePanel {
+	display: none;
+	background:#000;
+	color:#fff;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+#sentencewritingPanel textarea { height: 100%; width: 100%;}
+
+#multimediaPanel {
+	background: red;
+	padding: 10px;
+}
+
+#multimediaPanel img {
+	width: 100%;
+}
+
+#multimediaPanel .caption {
+	background: #fff;
+	padding: 10px;
+	margin-top: 6px;
+}
+
+.my-breakpoint.ui-grid-a .ui-block-a { padding: 7px 5px 0px 5px; }
+.my-breakpoint.ui-grid-b .ui-block-a,
+.my-breakpoint.ui-grid-b .ui-block-b, 
+.my-breakpoint.ui-grid-b .ui-block-c { width: 42%; }
+.my-breakpoint.ui-grid-b .ui-block-a { clear: left; }
+
+.my-breakpoint.ui-grid-b .ui-block-b {
+	text-align: center;
+	vertical-align: middle;
+	width: 16%;
+	padding-top: 20px;
+}
+
+
+.my-breakpoint.ui-grid-a .ui-block-a,
+.my-breakpoint.ui-grid-a .ui-block-b { width: 70%; }
+.my-breakpoint.ui-grid-a .ui-block-a { clear: left; }
+.my-breakpoint.ui-grid-a .ui-block-b {
+	text-align: center;
+	vertical-align: middle;
+	width: 30%;
+}
+
+.hint-icon {
+	background: url('../img/hint-icon.png');
+	width: 48px;
+	height: 48px;
+	display: block;
+	vertical-align: middle;
+}

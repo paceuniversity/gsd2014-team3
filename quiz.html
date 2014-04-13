@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+<link rel="stylesheet" href="assets/css/quiz.css">
 <script src="assets/js/jquery-1.10.2.min.js"></script>
 <script src="assets/js/jquery.mobile.custom.min.js"></script>
 
@@ -13,52 +14,23 @@ $(function() {
 		- $("div[data-role=header]").height()
 		- $("#multiplechoicePanel").height();
 	$("#multimediaPanel").height(multimediaHeight);
+	
+	// TBD: get json data from json
+	
+	var correctAnswer = "d";
+	var isMultipleChoiceMode = true;
+	
+	if(isMultipleChoiceMode)
+		$("#multiplechoicePanel").show();
+	else
+		$("#sentencewritingPanel").show();
+		
+	// set up dialog
+	$("a[data-rel=dialog]").click(function() {
+		$("#dialog").dialog();
+	});
 });
 </script>
-<style type="text/css">
-.ui-content { padding: 0px; }
-
-#multiplechoicePanel {
-	background:#000;
-	color:#fff;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-}
-
-#multimediaPanel {
-	background: red;
-	padding: 10px;
-}
-
-#multimediaPanel img {
-	width: 100%;
-}
-
-#multimediaPanel .caption {
-	background: #fff;
-	padding: 10px;
-	margin-top: 6px;
-}
-
-	.my-breakpoint.ui-grid-b .ui-block-a,
-	.my-breakpoint.ui-grid-b .ui-block-b, 
-	.my-breakpoint.ui-grid-b .ui-block-c { width: 42%; }
-	.my-breakpoint.ui-grid-b .ui-block-a { clear: left; }
-.my-breakpoint.ui-grid-b .ui-block-b {
-	text-align: center;
-	vertical-align: middle;
-	width: 16%;
-	padding-top: 20px;
-}
-	.hint-icon {
-	background: url('assets/img/hint-icon.png');
-	width: 48px;
-	height: 48px;
-	display: block;
-	vertical-align: middle;
-	}
-</style>
 </head>
 <body>
 
@@ -77,6 +49,21 @@ $(function() {
 				Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
 			</div>
 		</div>
+	
+		<!-- Begin panel for sentence writing -->
+		<div id="sentencewritingPanel">
+			<div class="ui-grid-a my-breakpoint">
+				<div class="ui-block-a">
+					<textarea rows="3" data-role="none" name="textarea" id="textarea" class="ui-corner-all"></textarea>
+				</div>
+				<div class="ui-block-b">
+					<a href="index.html" data-role="button" data-mini="true">Submit</a><br />
+				</div>
+			</div>
+		</div>
+		<!-- End panel for sentence writing -->	
+		
+		<!-- Begin panel for multiple choice -->
 		<div id="multiplechoicePanel">
 			<div class="ui-grid-b my-breakpoint">
 				<div class="ui-block-a">
@@ -84,14 +71,34 @@ $(function() {
 					<a href="index.html" data-role="button" data-mini="true">Link</a>
 				</div>
 				<div class="ui-block-b">
-					<a href="#" class="hint-icon"></a>
+					<a href="#dialog" class="hint-icon" data-rel="dialog" data-transition="pop"></a>
 				</div>
 				<div class="ui-block-c">
 					<a href="index.html" data-role="button" data-mini="true">Link</a>
 					<a href="index.html" data-role="button" data-mini="true">Link</a>
 				</div>
-			</div><!-- /grid-b -->
+			</div>
 		</div>
+		<!-- End panel for multiple choice -->
+		
+		<!-- Begin hint dialog -->
+		
+<div data-role="dialog">
+	
+		<div data-role="header" data-theme="d">
+			<h1>Dialog</h1>
+
+		</div>
+
+		<div data-role="content" data-theme="c">
+			<h1>Delete page?</h1>
+			<p>This is a regular page, styled as a dialog. To create a dialog, just link to a normal page and include a transition and <code>data-rel="dialog"</code> attribute.</p>
+			<a href="dialog/index.html" data-role="button" data-rel="back" data-theme="b">Sounds good</a>       
+			<a href="dialog/index.html" data-role="button" data-rel="back" data-theme="c">Cancel</a>    
+		</div>
+	</div>
+		<!-- Begin hint dialog -->
+
 	</div>
 </div>
 
