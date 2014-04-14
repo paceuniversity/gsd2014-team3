@@ -1,0 +1,10 @@
+div[data-role=header], #searchBox {
+  position:fixed;
+  width: 100%;
+  z-index:2;
+}
+div[data-role=header] > #sort {
+  right:5px;
+}
+#searchQ {
+}
