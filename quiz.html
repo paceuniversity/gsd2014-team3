@@ -45,23 +45,28 @@
 		<div id="multiplechoicePanel">
 			<div class="ui-grid-b my-breakpoint">
 				<div class="ui-block-a">
-					<a href="index.html" data-role="button" data-mini="true">Answer A</a>
-					<a href="index.html" data-role="button" data-mini="true">Answer B</a>
+					<a href="#popupIncorrect" data-rel="popup" data-transition="pop" data-role="button" data-mini="true" data-position-to="window" class="multiple-choice">Answer A</a>
+					<a href="#popupIncorrect" data-rel="popup" data-transition="pop" data-role="button" data-mini="true" data-position-to="window" class="multiple-choice">Answer B</a>
 				</div>
 				<div class="ui-block-b">
 					<a href="#popupDialog" data-rel="popup" data-inline="true" data-transition="pop" data-position-to="window" class="hint-icon"></a>
 				</div>
 				<div class="ui-block-c">
-					<a href="index.html" data-role="button" data-mini="true">Answer C</a>
-					<a href="#popupAnswer" data-rel="popup" data-transition="pop" data-role="button" data-mini="true" data-position-to="window">Answer D</a>
+					<a href="#popupCorrect" data-rel="popup" data-transition="pop" data-role="button" data-mini="true" data-position-to="window" class="multiple-choice">Answer C</a>
+					<a href="#popupIncorrect" data-rel="popup" data-transition="pop" data-role="button" data-mini="true" data-position-to="window" class="multiple-choice">Answer D</a>
 				</div>
 			</div>
 		</div>
 		<!-- End panel for multiple choice -->
 		
 		<!-- Popup for displaying whether answer was correct or incorrect -->
-		<div data-role="popup" id="popupAnswer" data-overlay-theme="b" data-theme="a">
-			<p>Correct! or not...</p>
+		<div data-role="popup" id="popupIncorrect" data-overlay-theme="b" data-theme="a">
+			<p>Sorry, that is not correct.</p>
+		</div>
+		
+		<!-- Popup for displaying whether answer was correct or incorrect -->
+		<div data-role="popup" id="popupCorrect" data-overlay-theme="b" data-theme="a">
+			<p>Correct!</p>
 		</div>
 	</div>
 
