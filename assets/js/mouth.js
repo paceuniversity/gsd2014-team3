@@ -1,8 +1,7 @@
 // create the audio context (chrome only for now)
 if (! window.AudioContext) {
-	if (! window.webkitAudioContext) {
+	if (! window.webkitAudioContext)
 		alert('no audiocontext found');
-	}
 	window.AudioContext = window.webkitAudioContext;
 }
 var context = new AudioContext();
@@ -86,7 +85,6 @@ javascriptNode.onaudioprocess = function() {
 function getAverageVolume(array) {
 	var values = 0;
 	var average;
-
 	var length = array.length;
 
 	// get average of the frequency amplitudes
