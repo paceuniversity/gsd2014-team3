@@ -34,7 +34,7 @@
 
 .my-breakpoint.ui-grid-a .ui-block-a { padding: 7px 5px 0px 5px; }
 .my-breakpoint.ui-grid-b .ui-block-a,
-.my-breakpoint.ui-grid-b .ui-block-b, 
+.my-breakpoint.ui-grid-b .ui-block-b,
 .my-breakpoint.ui-grid-b .ui-block-c { width: 42%; }
 .my-breakpoint.ui-grid-b .ui-block-a { clear: left; }
 
@@ -61,4 +61,14 @@
 	height: 48px;
 	display: inline-block;
 	vertical-align: middle;
+}
+div[data-role=header], #searchBox {
+  position:fixed;
+  width: 100%;
+  z-index:2;
+}
+div[data-role=header] > #sort {
+  right:5px;
+}
+#searchQ {
 }
