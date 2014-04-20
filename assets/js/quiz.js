@@ -1,7 +1,7 @@
 var videoPlayer;
 var answerScore = 4; // default is 4; decrements by 1 each time a user gets something wrong until zero
 
-$(function() {
+$(document).on('pageshow', '#quiz', function() {
 	// set height of multimedia panel to fit screen
 	var multimediaHeight = screen.height
 		- $("div[data-role=header]").height()
@@ -47,12 +47,12 @@ $(function() {
 		// avatar will speak to user
 		caption = "What is the avatar saying? Choose the English equivalent below.";
 		
-		//var avatar = $("<img>").attr("src", "assets/img/avatar.png").attr("width", "100%");
-		// var eyebrows = $("<div></div>").addClass("eyebrows-up");
-		// var mouth = $("<div></div>").addClass("mouth-smile");
+		var avatar = $("<div></div>").addClass("avatar");
+		var eyebrows = $("<div></div>").addClass("eyebrows-up");
+		var mouth = $("<div></div>").addClass("mouth-smile");
 		
-		$("#multimediaPanel").addClass("avatar");
-	//	avatar.append(eyebrows).append(mouth);
+		$("#multimediaPanel .media-container").html(avatar);
+		avatar.html(eyebrows).append(mouth);
 		
 		// functions for multiple choice
 		$(".multiple-choice").click(function() {
