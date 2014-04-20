@@ -70,34 +70,53 @@
 }
 
 .eyebrows-up {
+	background-color: #fff;
 	background: url('../img/eyebrows.png');
 	background-position: top center;
 	display: block;
 	margin: auto;
-	width: 100%;
+	width: 90px;
+	position: relative;
+	top: 90px;
 	background-size:100%;
+	height: 20px;
 }
 
 .eyebrows-down {
+	background-color: #c0c0c0;
 	background: url('../img/eyebrows.png');
 	background-position: bottom center;
 	display: block;
 	margin: auto;
-	width: 136px;
+	width: 90px;
+	position: relative;
+	top: 90px;
+	background-size:100%;
+	height: 20px;
 }
 
 .mouth-smile {
+	background-color: #fff;
 	background: url('../img/mouth.png');
 	background-position: top center;
 	display: block;
 	margin: auto;
-	width: 136px;
+	width: 60px;
+	position: relative;
+	top: 135px;
+	background-size:100%;
+	height: 20px;
 }
 
 .mouth-frown {
+	background-color: #c0c0c0;
 	background: url('../img/mouth.png');
 	background-position: bottom center;
 	display: block;
 	margin: auto;
-	width: 136px;
+	width: 60px;
+	position: relative;
+	top: 135px;
+	background-size:100%;
+	height: 20px;
 }
