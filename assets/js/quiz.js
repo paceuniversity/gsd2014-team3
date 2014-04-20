@@ -50,13 +50,20 @@ $(document).on('pageshow', '#quiz', function() {
 		var avatar = $("<div></div>").addClass("avatar");
 		var eyebrows = $("<div></div>").addClass("eyebrows").addClass("up");
 		var mouth = $("<div></div>").addClass("mouth").addClass("smile");
+		var info = $("<div></div>").addClass("info").html("Click to replay.");
 		
-		$("#multimediaPanel .media-container").html(avatar);
+		$("#multimediaPanel .media-container").html(avatar).append(info);
 		avatar.html(eyebrows).append(mouth);
 		
+		// load the sound
+		loadSound("data/audio/greetings/habari za mchana.mp3");
 		
-// load the sound
-loadSound("data/audio/greetings/habari%20za%20asubuhi.mp3");
+		// when the avatar is clicked, replay the sound file
+		avatar.click(function() {
+			// load the sound
+			setupAudioNodes();
+			loadSound("data/audio/greetings/habari za mchana.mp3");
+		});
 		
 		// functions for multiple choice
 		$(".multiple-choice").click(function() {

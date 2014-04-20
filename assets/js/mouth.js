@@ -55,6 +55,8 @@ function loadSound(url) {
 		}, onError);
 	}
 	request.send();
+	
+	return audioBuffer;
 }
 
 function playSound(buffer) {
@@ -79,6 +81,10 @@ javascriptNode.onaudioprocess = function() {
 		$(".mouth").removeClass().addClass("mouth").addClass("talking");
 	else
 		$(".mouth").removeClass().addClass("mouth").addClass("smile");
+	if(average == 0)
+		$(".info").show();
+	else
+		$(".info").hide();
 	lastVol = average;
 }
 
