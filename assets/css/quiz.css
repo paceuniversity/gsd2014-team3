@@ -31,19 +31,18 @@
 	margin-top: 6px;
 }
 
+/* fluid grid for multiple choice and sentence-writing panels */
 .my-breakpoint.ui-grid-a .ui-block-a { padding: 7px 5px 0px 5px; }
 .my-breakpoint.ui-grid-b .ui-block-a,
 .my-breakpoint.ui-grid-b .ui-block-b, 
 .my-breakpoint.ui-grid-b .ui-block-c { width: 42%; }
 .my-breakpoint.ui-grid-b .ui-block-a { clear: left; }
-
 .my-breakpoint.ui-grid-b .ui-block-b {
 	text-align: center;
 	vertical-align: middle;
 	width: 16%;
 	padding-top: 20px;
 }
-
 
 .my-breakpoint.ui-grid-a .ui-block-a,
 .my-breakpoint.ui-grid-a .ui-block-b { width: 70%; }
@@ -62,6 +61,7 @@
 	vertical-align: middle;
 }
 
+/* avatar and facial features */
 .avatar {
 	background-image: url('../img/avatar.png');
 	background-size:100%;
@@ -69,54 +69,32 @@
 	height: 100%;
 }
 
-.eyebrows-up {
-	background-color: #fff;
+.eyebrows {
 	background: url('../img/eyebrows.png');
-	background-position: top center;
 	display: block;
 	margin: auto;
 	width: 90px;
 	position: relative;
-	top: 90px;
+	top: 27%;
 	background-size:100%;
 	height: 20px;
 }
 
-.eyebrows-down {
-	background-color: #c0c0c0;
-	background: url('../img/eyebrows.png');
-	background-position: bottom center;
+.up { background-position: top center;}
+.down { background-position: bottom center;}
+
+.mouth {
+	background-image: url('../img/mouth.png');
+	background-repeat: no-repeat;
 	display: block;
 	margin: auto;
-	width: 90px;
+	width: 15%;
+	height: 5%;
 	position: relative;
-	top: 90px;
+	top: 41%;
 	background-size:100%;
-	height: 20px;
 }
 
-.mouth-smile {
-	background-color: #fff;
-	background: url('../img/mouth.png');
-	background-position: top center;
-	display: block;
-	margin: auto;
-	width: 60px;
-	position: relative;
-	top: 135px;
-	background-size:100%;
-	height: 20px;
-}
-
-.mouth-frown {
-	background-color: #c0c0c0;
-	background: url('../img/mouth.png');
-	background-position: bottom center;
-	display: block;
-	margin: auto;
-	width: 60px;
-	position: relative;
-	top: 135px;
-	background-size:100%;
-	height: 20px;
-}
+.smile { background-position: top center; }
+.frown { background-position: bottom center; }
+.talking { background-position: center center; }

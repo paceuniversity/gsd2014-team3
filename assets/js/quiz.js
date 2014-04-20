@@ -48,8 +48,8 @@ $(document).on('pageshow', '#quiz', function() {
 		caption = "What is the avatar saying? Choose the English equivalent below.";
 		
 		var avatar = $("<div></div>").addClass("avatar");
-		var eyebrows = $("<div></div>").addClass("eyebrows-up");
-		var mouth = $("<div></div>").addClass("mouth-smile");
+		var eyebrows = $("<div></div>").addClass("eyebrows").addClass("up");
+		var mouth = $("<div></div>").addClass("mouth").addClass("smile");
 		
 		$("#multimediaPanel .media-container").html(avatar);
 		avatar.html(eyebrows).append(mouth);
@@ -60,8 +60,8 @@ $(document).on('pageshow', '#quiz', function() {
 				// popup was correct!
 				answerScore = 4;
 				
-				mouth.removeClass().addClass("mouth-smile");
-				eyebrows.removeClass().addClass("eyebrows-up");
+				mouth.removeClass().addClass("mouth").addClass("smile");
+				eyebrows.removeClass().addClass("eyebrows").addClass("up");
 				// TBD: redirect...
 			} else {
 				// the answer was incorrect; decrement score and make avatar angrier
@@ -69,9 +69,9 @@ $(document).on('pageshow', '#quiz', function() {
 				
 				// change eyebrows and/or mouth to make avatar look upset
 				if(answerScore == 3)
-					mouth.removeClass().addClass("mouth-frown");
+					mouth.removeClass().addClass("mouth").addClass("frown");
 				else if(answerScore == 2)
-					eyebrows.removeClass().addClass("eyebrows-down");
+					eyebrows.removeClass().addClass("eyebrows").addClass("down");
 			}
 		});
 	}
