@@ -12,9 +12,7 @@ var splitter;
 var analyser, analyser2;
 var javascriptNode;
 
-// load the sound
 setupAudioNodes();
-loadSound("habari.mp3");
 
 function setupAudioNodes() {
 	// setup a javascript node
@@ -79,9 +77,9 @@ javascriptNode.onaudioprocess = function() {
 
 	// change the avatar's mouth based on volume
 	if(Math.abs(average-lastVol) >= 5 && lastVol > 0)
-		$("#speak").html("XXX"); // open mouth
+		$(".mouth").removeClass().addClass("mouth").addClass("talking");
 	else
-		$("#speak").html("---"); // close mouth
+		$(".mouth").removeClass().addClass("mouth").addClass("smile");
 	lastVol = average;
 }
 

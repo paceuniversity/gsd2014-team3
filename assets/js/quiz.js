@@ -54,6 +54,10 @@ $(document).on('pageshow', '#quiz', function() {
 		$("#multimediaPanel .media-container").html(avatar);
 		avatar.html(eyebrows).append(mouth);
 		
+		
+// load the sound
+loadSound("data/audio/greetings/habari%20za%20asubuhi.mp3");
+		
 		// functions for multiple choice
 		$(".multiple-choice").click(function() {
 			if($(this).attr("href") == "#popupCorrect") {
