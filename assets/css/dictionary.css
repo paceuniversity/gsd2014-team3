@@ -1,67 +1,3 @@
-.ui-content { padding: 0px; }
-
-#sentencewritingPanel, #multiplechoicePanel {
-	display: none;
-	background:#000;
-	color:#fff;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-}
-
-#sentencewritingPanel textarea { height: 100%; width: 100%;}
-
-#multimediaPanel {
-	background: red;
-	padding: 10px;
-}
-
-#multimediaPanel .media-container {
-	width: 100%;
-	background: #fff;
-}
-
-#multimediaPanel video, #multimediaPanel img {
-	vertical-align: middle;
-}
-
-#multimediaPanel .caption {
-	background: #c0c0c0;
-	padding: 10px;
-	margin-top: 6px;
-}
-
-.my-breakpoint.ui-grid-a .ui-block-a { padding: 7px 5px 0px 5px; }
-.my-breakpoint.ui-grid-b .ui-block-a,
-.my-breakpoint.ui-grid-b .ui-block-b,
-.my-breakpoint.ui-grid-b .ui-block-c { width: 42%; }
-.my-breakpoint.ui-grid-b .ui-block-a { clear: left; }
-
-.my-breakpoint.ui-grid-b .ui-block-b {
-	text-align: center;
-	vertical-align: middle;
-	width: 16%;
-	padding-top: 20px;
-}
-
-
-.my-breakpoint.ui-grid-a .ui-block-a,
-.my-breakpoint.ui-grid-a .ui-block-b { width: 70%; }
-.my-breakpoint.ui-grid-a .ui-block-a { clear: left; }
-.my-breakpoint.ui-grid-a .ui-block-b {
-	text-align: center;
-	vertical-align: middle;
-	width: 30%;
-}
-
-.hint-icon {
-	background: url('../img/hint-icon.png');
-	width: 48px;
-	height: 48px;
-	display: inline-block;
-	vertical-align: middle;
-}
 div[data-role=header], #searchBox {
   position:fixed;
   width: 100%;
@@ -70,5 +6,13 @@ div[data-role=header], #searchBox {
 div[data-role=header] > #sort {
   right:5px;
 }
-#searchQ {
+div#searchBox {
+  padding-left: 7.5%;
+  background: #e9e9e9;
+}
+div[data-role=main] {
+  margin-top: 2em;
+}
+div.ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset {
+  width: 85%;
 }
