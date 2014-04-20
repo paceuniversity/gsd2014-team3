@@ -58,6 +58,10 @@ $(document).on('pageshow', '#quiz', function() {
 		$(".multiple-choice").click(function() {
 			if($(this).attr("href") == "#popupCorrect") {
 				// popup was correct!
+				answerScore = 4;
+				
+				mouth.removeClass().addClass("mouth-smile");
+				eyebrows.removeClass().addClass("eyebrows-up");
 				// TBD: redirect...
 			} else {
 				// the answer was incorrect; decrement score and make avatar angrier
@@ -65,9 +69,9 @@ $(document).on('pageshow', '#quiz', function() {
 				
 				// change eyebrows and/or mouth to make avatar look upset
 				if(answerScore == 3)
-					eyebrows.toggleClass("eyebrows-down");
+					mouth.removeClass().addClass("mouth-frown");
 				else if(answerScore == 2)
-					mouth.toggleClass("mouth-frown");
+					eyebrows.removeClass().addClass("eyebrows-down");
 			}
 		});
 	}
