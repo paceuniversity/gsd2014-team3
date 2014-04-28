@@ -1,0 +1,35 @@
+[    
+    {
+        "type": "lecture",
+		"lectType": "avatar",
+        "caption": "Baba mkubwa",
+        "audio": "family/baba mkubwa",
+        "english": "Father"
+    },
+    {
+        "type": "lecture",
+		"lectType": "avatar",
+        "caption": "Mama mkubwa",
+        "audio": "family/maba mkubwa",
+        "english": "Mother"
+    },
+	{
+        "type": "quiz",
+        "caption": "Hey, do you remember what 'Mama mkubwa' means?",
+		"hint": "she gave birth to you",
+        "answers": [
+            "Mother"
+        ]
+    },
+    {
+        "type": "quiz",
+        "caption": "How about <b>Me gusta huevos</b> means?",
+		"hint": "it's round and <i>oval</i>",
+        "answers": [
+            "I like eggs",
+            "I like bread",
+            "I like cheese",
+            "I count potatoes"
+        ]
+    }
+]
