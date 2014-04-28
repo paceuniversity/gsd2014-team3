@@ -8,7 +8,6 @@
 	<script src="assets/js/jquery-1.10.2.min.js"></script>
 	<script src="assets/js/jquery.mobile.custom.min.js"></script>
 	<script src="assets/js/quiz.js"></script>
-	<script src="assets/js/mouth.js"></script>
 </head>
 
 <body>
@@ -25,45 +24,58 @@
 		<div id="multimediaPanel">
 			<div class="media-container"></div>
 			<div class="ui-corner-all ui-mini caption"></div>
+			<a href="#" data-role="button" data-mini="true" id="translation">Translation</a>
 		</div>
 	
 		<!-- Begin panel for sentence writing -->
 		<div id="sentencewritingPanel">
 			<div class="ui-grid-a my-breakpoint">
 				<div class="ui-block-a">
-					<textarea rows="3" data-role="none" name="textarea" id="textarea" class="ui-corner-all"></textarea>
+					<textarea rows="3" data-role="none" name="textarea" id="sentenceText" class="ui-corner-all"></textarea>
 				</div>
 				<div class="ui-block-b">
-					<a href="index.html" data-role="button" data-mini="true">Submit</a><br />
+					<a href="#" data-role="button" data-mini="true" id="sentenceSubmit">Submit</a><br />
 				</div>
 			</div>
 		</div>
-		<!-- End panel for sentence writing -->	
+		<!-- End panel for sentence writing -->
 		
-		
-		
+		<!-- Begin continue button -->
+		<div id="continuePanel">
+			<div class="ui-grid-solo">
+				<div class="ui-block-a">
+					<a href="#" data-role="button" data-mini="true" id="continue">Continue</a>
+				</div>
+			</div>
+		</div>
+		<!-- End continue button -->
 		
 		<!-- Begin panel for multiple choice -->
 		<div id="multiplechoicePanel">
 			<div class="ui-grid-b my-breakpoint">
 				<div class="ui-block-a">
-					<a href="#popupIncorrect" data-rel="popup" data-transition="pop" data-role="button" data-mini="true" data-position-to="window" class="multiple-choice">Answer A</a>
-					<a href="#popupIncorrect" data-rel="popup" data-transition="pop" data-role="button" data-mini="true" data-position-to="window" class="multiple-choice">Answer B</a>
+					<a href="#popupIncorrect" id="ans0" data-rel="popup" data-transition="pop" data-role="button" data-mini="true" data-position-to="window" class="multiple-choice">Answer A</a>
+					<a href="#popupIncorrect" id="ans1" data-rel="popup" data-transition="pop" data-role="button" data-mini="true" data-position-to="window" class="multiple-choice">Answer B</a>
 				</div>
 				<div class="ui-block-b">
-					<a href="#popupDialog" data-rel="popup" data-inline="true" data-transition="pop" data-position-to="window" class="hint-icon"></a>
+					<a href="#popupDialog" data-rel="popup" data-inline="true" data-transition="pop" data-position-to="window" class="hint-icon" id="hintTrigger"></a>
 				</div>
 				<div class="ui-block-c">
-					<a href="#popupCorrect" data-rel="popup" data-transition="pop" data-role="button" data-mini="true" data-position-to="window" class="multiple-choice">Answer C</a>
-					<a href="#popupIncorrect" data-rel="popup" data-transition="pop" data-role="button" data-mini="true" data-position-to="window" class="multiple-choice">Answer D</a>
+					<a href="#popupCorrect" id="ans2" data-rel="popup" data-transition="pop" data-role="button" data-mini="true" data-position-to="window" class="multiple-choice">Answer C</a>
+					<a href="#popupIncorrect" id="ans3" data-rel="popup" data-transition="pop" data-role="button" data-mini="true" data-position-to="window" class="multiple-choice">Answer D</a>
 				</div>
 			</div>
 		</div>
 		<!-- End panel for multiple choice -->
 		
+		<!-- Popup for displaying whether answer was correct or incorrect WITH detail -->
+		<div data-role="popup" id="popupIncorrectDetail" data-theme="a">
+			<p></p>
+		</div>
+		
 		<!-- Popup for displaying whether answer was correct or incorrect -->
 		<div data-role="popup" id="popupIncorrect" data-theme="a">
-			<p>Sorry, that is not correct.</p>
+			<p>Sorry, that's not correct. You have <b id="attempts">3</b> attempts remaining.</p>
 		</div>
 		
 		<!-- Popup for displaying whether answer was correct or incorrect -->
@@ -78,7 +90,7 @@
 			<h1>Hint</h1>
 		</div>
 		<div data-role="content" data-theme="d" style="padding:15px;" class="ui-corner-bottom">
-			<p>Here's your hint! Here's your hint! Here's your hint! Here's your hint! Here's your hint! </p>
+			<p></p>
 			<a href="docs-dialogs.html" data-role="button" data-rel="back" data-theme="b">Ok, got it!</a> 
 		</div>
 	</div>
