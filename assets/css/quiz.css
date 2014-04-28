@@ -1,6 +1,6 @@
 .ui-content { padding: 0px; }
 
-#sentencewritingPanel, #multiplechoicePanel {
+#sentencewritingPanel, #multiplechoicePanel, #continuePanel {
 	display: none;
 	background:#000;
 	color:#fff;
