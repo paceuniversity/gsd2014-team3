@@ -31,5 +31,16 @@
             "I like cheese",
             "I count potatoes"
         ]
+    },
+    {
+        "type": "quiz",
+        "caption": "How about <b>Te amo</b> means?",
+		"hint": "it's round and <i>oval</i>",
+        "answers": [
+            "I love you",
+            "I love eggs",
+            "I love lamp",
+            "I love cheese"
+        ]
     }
 ]
