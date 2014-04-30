@@ -87,6 +87,7 @@ function initQuiz(data) {
 			$("#ans" + i).attr("href", (answers[i] == correct ? "#popupCorrect" : "#popupIncorrect")).html(answers[i]);
 		
 		// functions for multiple choice
+		$(".multiple-choice").click(function() { return false; });
 		$(".multiple-choice").click(function() {
 			if($(this).attr("href") == "#popupCorrect") {
 				// popup was correct!
@@ -199,7 +200,7 @@ function initLecture(data) {
 		// display an image as the media
 	} else {
 		// avatar will speak to user
-		caption = "What is the avatar saying? Choose the English equivalent below.";
+		caption = data.caption;
 		
 		var avatar = $("<div></div>").addClass("avatar");
 		var eyebrows = $("<div></div>").addClass("eyebrows").addClass("up");
@@ -224,8 +225,11 @@ function initLecture(data) {
 
 	// resize the height of the media container to be a square
 	$(".media-container").height($(".media-container").width());
+	
+	// show caption
+	$(".caption").html(caption).show();
 
-	// hide caption, sentence writing panel and multiple choice
+	// hide sentence writing panel and multiple choice
 	$("#multiplechoicePanel").fadeOut();
 	$("#sentencewritingPanel").fadeOut();
 	
