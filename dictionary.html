@@ -4,7 +4,6 @@
     <meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0">
     <link rel="stylesheet" href="assets/css/jquery.mobile.custom.theme.min.css">
     <link rel="stylesheet" href="assets/css/jquery.mobile.custom.structure.min.css">
-    <link rel="stylesheet" href="assets/css/dictionary.css">
     <script src="assets/js/jquery-1.10.2.min.js"></script>
     <script src="assets/js/jquery.mobile.custom.min.js"></script>
     <script src="assets/js/dictionary.js" id="panel-init"></script>
@@ -13,15 +12,17 @@
   <body style="overflow-y:hidden">
 
   <div data-role="page" id="pageone">
-    <div data-role="header" data-theme="a" data-position="fixed">
+    <div data-theme="a" data-role="header">
       <a href="index.html" data-icon="home" data-iconpos="notext" class="ui-btn-left jqm-home">Home</a>
       <h1>Dictionary</h1>
       <a href="#popupDialog" data-icon="sort" data-iconpos="notext" class="ui-btn-right jqm-home" data-rel="popup" data-transition="pop" data-position-to="window" id="sort">Sort</a>
+		<input type="text" id="dictionarySearch">
+	</div>
+	
+    <div data-position-fixed="true">
     </div>
-    <div id="searchBox">
-      <input type="text" id="searchQ" />
-    </div>
-    <div data-role="main" class="ui-content">
+	
+    <div data-role="main" class="ui-content dictionary-main">
     <!--begin dict list-->
     <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
       <li class="ui-li-static ui-body-inherit ui-first-child">
