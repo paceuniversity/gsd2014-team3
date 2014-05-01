@@ -18,7 +18,7 @@ $(document).on('pageshow', '#conversation-chooser', function() {
       li.attr("id", value.Category);
       categories.push(li);
     });
-    for (i=0; i<categories.length; i--) {
+    for (i=0; i<categories.length; i++) {
       $("#catlist").append(categories[i]);
     }
   });
