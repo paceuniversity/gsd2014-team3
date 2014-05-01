@@ -8,65 +8,20 @@
     <link rel="stylesheet" href="assets/css/dictionary.css">
     <script src="assets/js/jquery-1.10.2.min.js"></script>
     <script src="assets/js/jquery.mobile.custom.min.js"></script>
-    <script src="assets/js/dictionary.js" id="panel-init"></script>
+    <script src="assets/js/choose.js" id="panel-init"></script>
   </head>
 
   <body style="overflow-y:hidden">
 
-  <div data-role="page" id="pageone">
+  <div data-role="page" id="conversation-chooser">
     <div data-role="header" data-theme="a" data-position="fixed">
       <a href="index.html" data-icon="home" data-iconpos="notext" class="ui-btn-left jqm-home">Home</a>
       <h1>Choose a category</h1>
       <a href="#popupDialog" data-icon="sort" data-iconpos="notext" class="ui-btn-right jqm-home" data-rel="popup" data-transition="pop" data-position-to="window" id="sort">Sort</a>
     </div>
-    <div id="searchBox">
-      <input type="text" id="searchQ" />
-    </div>
     <div data-role="main" class="ui-content">
     <!--begin dict list-->
-    <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
-      <li class="ui-li-static ui-body-inherit ui-first-child">
-        <h3>Stephen Weber</h3>
-        <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
-        <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
-        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-      </li>
-      <li class="ui-li-static ui-body-inherit">
-        <h3>Stephen Weber</h3>
-        <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
-        <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
-        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-      </li>
-      <li class="ui-li-static ui-body-inherit">
-        <h3>Stephen Weber</h3>
-        <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
-        <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
-        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-      </li>
-      <li class="ui-li-static ui-body-inherit">
-        <h3>Stephen Weber</h3>
-        <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
-        <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
-        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-      </li>
-      <li class="ui-li-static ui-body-inherit ui-last-child">
-        <h3>jQuery Team</h3>
-        <p><strong>Boston Conference Planning</strong></p>
-        <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
-        <p class="ui-li-aside"><strong>9:18</strong>AM</p>
-      </li>
-      <li class="ui-li-static ui-body-inherit ui-last-child">
-        <h3>jQuery Team</h3>
-        <p><strong>Boston Conference Planning</strong></p>
-        <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
-        <p class="ui-li-aside"><strong>9:18</strong>AM</p>
-      </li>
-      <li class="ui-li-static ui-body-inherit ui-last-child">
-        <h3>jQuery Team</h3>
-        <p><strong>Boston Conference Planning</strong></p>
-        <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
-        <p class="ui-li-aside"><strong>9:18</strong>AM</p>
-      </li>
+    <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" id="catlist">
     </ul>
   <!--End dict list-->
   <!-- Begin sort dialog -->

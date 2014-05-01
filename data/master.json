@@ -1,13 +1,13 @@
 {
-  "Available Lessons": [
+  "available": [
   {"Category": "Greetings", "File": "greetings.json", "Dictionary": "greetings.json", "Max": 20, "Description": "Learn to greet people!"},
   {"Category": "Family", "File": "family.json", "Dictionary": "family.json", "Max": 20, "Description": "Talk about your family!"},
   {"Category": "Counting", "File": "counting.json", "Dictionary": "counting.json", "Max": 10, "Description": "Count to ten!"}
   ],
-  "Completed Lessons": [
+  "completed": [
   {"Category": "Greetings", "Score": 18}
   ],
-  "Unlocked Dictionaries": [
+  "unlockedDictionaries": [
   {"Category": "Greetings", "File": "greetings.json"}
   ]
 }
