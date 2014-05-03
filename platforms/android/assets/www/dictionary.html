@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0">
+    <link rel="stylesheet" href="assets/css/jquery.mobile.custom.theme.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.mobile.custom.structure.min.css">
+    <script src="assets/js/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/jquery.mobile.custom.min.js"></script>
+    <script src="assets/js/dictionary.js" id="panel-init"></script>
+  </head>
+
+  <body style="overflow-y:hidden">
+
+  <div data-role="page" id="pageone">
+    <div data-theme="a" data-role="header">
+      <a href="index.html" data-icon="home" data-iconpos="notext" class="ui-btn-left jqm-home">Home</a>
+      <h1>Dictionary</h1>
+      <a href="#popupDialog" data-icon="sort" data-iconpos="notext" class="ui-btn-right jqm-home" data-rel="popup" data-transition="pop" data-position-to="window" id="sort">Sort</a>
+		<input type="text" id="dictionarySearch">
+	</div>
+	
+    <div data-position-fixed="true">
+    </div>
+	
+    <div data-role="main" class="ui-content dictionary-main">
+    <!--begin dict list-->
+    <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+      <li class="ui-li-static ui-body-inherit ui-first-child">
+        <h3>Stephen Weber</h3>
+        <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+        <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+      </li>
+      <li class="ui-li-static ui-body-inherit">
+        <h3>Stephen Weber</h3>
+        <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+        <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+      </li>
+      <li class="ui-li-static ui-body-inherit">
+        <h3>Stephen Weber</h3>
+        <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+        <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+      </li>
+      <li class="ui-li-static ui-body-inherit">
+        <h3>Stephen Weber</h3>
+        <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+        <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+      </li>
+      <li class="ui-li-static ui-body-inherit ui-last-child">
+        <h3>jQuery Team</h3>
+        <p><strong>Boston Conference Planning</strong></p>
+        <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+        <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+      </li>
+      <li class="ui-li-static ui-body-inherit ui-last-child">
+        <h3>jQuery Team</h3>
+        <p><strong>Boston Conference Planning</strong></p>
+        <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+        <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+      </li>
+      <li class="ui-li-static ui-body-inherit ui-last-child">
+        <h3>jQuery Team</h3>
+        <p><strong>Boston Conference Planning</strong></p>
+        <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+        <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+      </li>
+    </ul>
+  <!--End dict list-->
+  <!-- Begin sort dialog -->
+    <div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="a" class="ui-corner-all">
+      <div data-role="header" data-theme="d" class="ui-corner-top">
+        <h1>Sort&nbsp;by</h1>
+      </div>
+      <div data-role="content" data-theme="d" style="padding-top:45px;" class="ui-corner-bottom">
+        <a href="docs-dialogs.html" data-role="button" data-rel="back" data-theme="b">English</a>
+        <a href="docs-dialogs.html" data-role="button" data-rel="back" data-theme="b">Kiswahili</a>
+        <a href="docs-dialogs.html" data-role="button" data-rel="back" data-theme="b">Category</a>
+      </div>
+    </div>
+    <!-- End hint dialog -->
+  </div>
+
+  </body>
+  </html>
+

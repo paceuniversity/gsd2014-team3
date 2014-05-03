@@ -1,0 +1,8 @@
+{
+  "category": "Family",
+  "data": [
+    {"english": "mother", "kiswahili": "mama", "type": "noun", "img": "/assets/img/Nx29I.png", "mp3": "/assets/mp3/Nx29I.mp3"},
+    {"english": "father", "kiswahili": "baba", "type": "noun", "img": "/assets/img/efWnv.png", "mp3": "/assets/mp3/efWnv.mp3"},
+    {"english": "brother", "kiswahili": "ndugu", "type": "noun", "img": "/assets/img/iem3B.png", "mp3": "/assets/mp3/iem3B.mp3"}
+  ]
+}
