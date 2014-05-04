@@ -67,8 +67,6 @@ function initQuiz(data) {
 	avatar.click(function() {
 		// reload the sound
 		//myaudio.play();
-		var media = new Media("data/audio/" + data.audio + ".mp3");
-		media.play();
 	});
 	
 	// if a hint is available, show the lightbulb and set the hint
@@ -220,8 +218,8 @@ function initLecture(data) {
 		// when the avatar is clicked, replay the sound file
 		avatar.click(function() {
 			// load the sound
-			var media = new Media("data/audio/baba mdogo.mp3");
-			media.play();
+			setupAudioNodes();
+			loadSound("data/audio/greetings/habari za mchana.mp3");
 		});
 	}
 
