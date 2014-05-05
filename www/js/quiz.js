@@ -21,6 +21,9 @@ $(document).on('pageshow', '#quiz', function() {
 });
 
 function setUpNextPanel() {
+	// stop audio if playing
+	stopAudio();
+	
 	if(k >= data.length) {
 		console.log("end");
 		// lesson complete, redirect to progress report
