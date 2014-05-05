@@ -2,15 +2,17 @@
 <html>
 <head>
 	<meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0">
-	<link rel="stylesheet" href="assets/css/jquery.mobile-1.4.2.min.css">
-	<link rel="stylesheet" href="assets/css/quiz.css">
-	<link rel="stylesheet" href="assets/css/master.css">
-	<script src="assets/js/jquery-1.10.2.min.js"></script>
-	<script src="assets/js/jquery.mobile.custom.min.js"></script>
-	<script src="assets/js/master.js"></script>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css">
+	<link rel="stylesheet" href="css/quiz.css">
+	<link rel="stylesheet" href="css/master.css">
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery.mobile.custom.min.js"></script>
 	<script src="cordova.js"></script>
-	<script src="assets/js/quiz.js"></script>
-  <script src="assets/js/choose.js" id="panel-init"></script>
+	<script type="text/javascript" charset="utf-8" src="js/audio.js"></script>
+	<script src="js/master.js"></script>
+    <script src="js/dictionary.js" id="panel-init"></script>
+	<script src="js/quiz.js"></script>
+  <script src="js/choose.js" id="panel-init"></script>
 </head>
 
 <body>
@@ -21,9 +23,16 @@
 		<h1>Sample Quiz</h1>
 		<a href="#calendar" data-icon="calendar" data-iconpos="notext" class="ui-btn-right jqm-home">Menu</a>
 	</div>
+	<br />
+	<br />
+	<br />
+	<br />
 	<a href="lesson.html">Take a sample quiz...</a><br />
 	<a href="choose.html">choose category...</a><br />
 	<a href="dictionary.html">Check your dictionary</a>
+	<a href="#" id="audi" onclick="playAudio('data/audio/greetings/chechei.mp3')">Play audio</a>
+	<a href="#" id="ff" onclick="alert(window.location.pathname)">Current dir</a>
+	<span id="audio_position"></span>
 </div>
 
 

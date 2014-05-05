@@ -1,2 +1,2 @@
-C:\wamp\www\gsd2014-team3\platforms\android\CordovaLib\ant-build\AndroidManifest.xml : \
-C:\wamp\www\gsd2014-team3\platforms\android\CordovaLib\AndroidManifest.xml \
+C:\xampp\htdocs\jifunze-kiswahili\platforms\android\CordovaLib\ant-build\AndroidManifest.xml : \
+C:\xampp\htdocs\jifunze-kiswahili\platforms\android\CordovaLib\AndroidManifest.xml \
