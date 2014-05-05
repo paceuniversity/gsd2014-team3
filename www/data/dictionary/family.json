@@ -1,0 +1,26 @@
+{
+  "category": "Family",
+  "data": [
+    {"english" : "mother", "kiswahili" : "mama", "audio" : "mama.mp3", "notes" : "Biological Mother (Real mother)" },
+    {"english" : "father", "kiswahili" : "baba", "audio" : "baba.mp3", "notes" : "Biological Father (Real mother)" },
+    {"english" : "child", "kiswahili" : "mtoto", "audio" : "mtoto.mp3" },
+    {"english" : "childrens", "kiswahili" : "watoto", "audio" : "watoto.mp3" },
+    {"english" : "brother", "kiswahili" : "kaka", "audio" : "kaka.mp3" },
+    {"english" : "sister", "kiswahili" : "dada", "audio" : "dada.mp3" },
+    {"english" : "uncle", "kiswahili" : "mjomba", "audio" : "mjomba.mp3", "notes" : "your mother's brother (You can use this word to identify them all)" },
+    {"english" : "aunt", "kiswahili" : "shangazi", "audio" : "shangazi.mp3", "notes" : "your father's sister (You can use this word to identify them all)" },
+    {"english" : "uncle", "kiswahili" : "baba mdogo", "audio" : "baba mdogo.mp3", "notes" : "your father's brother. But your father is older than he" },
+    {"english" : "aunt", "kiswahili" : "mama mdogo", "audio" : "mama mdogo.mp3", "notes" : "your mother's sister. But your mother is older than she" },
+    {"english" : "uncle", "kiswahili" : "baba mkubwa", "audio" : "baba mkubwa.mp3", "notes" : "your father's brother. But he  is older than your father" },
+    {"english" : "aunt", "kiswahili" : "mama mkubwa", "audio" : "mama mkubwa.mp3", "notes" : "your mother's sister. But she is older than your mother" },
+    {"english" : "grand father", "kiswahili" : "babu", "audio" : "babu.mp3", "notes" : "your mother's/father's father" },
+    {"english" : "grandmother", "kiswahili" : "bibi", "audio" : "bibi.mp3", "notes" : "your mother's/father's mother" },
+    {"english" : "grand son/daughter", "kiswahili" : "mjukuu", "audio" : "mjukuu.mp3" },
+    {"english" : "grand son/daughter's child", "kiswahili" : "kitukuu", "audio" : "kitukuu.mp3" },
+    {"english" : "aunt", "kiswahili" : "Haloo", "audio" : "Haloo.mp3", "notes" : "your mother's sister (You can use this word to identify them all)" },
+    {"english" : "uncle", "kiswahili" : "ami", "audio" : "ami.mp3", "notes" : "your father's brother (You can use this word to identify them all)" },
+    {"english" : "sister in law", "kiswahili" : "wifi", "audio" : "wifi.mp3" },
+    {"english" : "brother in law", "kiswahili" : "shemeji", "audio" : "shemeji.mp3" },
+    {"english" : "mother in law", "kiswahili" : "mama mkwe", "audio" : "mama mkwe.mp3", "notes" : "A mother of your wife/husband" },
+    {"english" : "father in law", "kiswahili" : "baba mkwe", "audio" : "baba mkwe.mp3", "notes" : "A father of your wife/husband" }
+  ]

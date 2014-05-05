@@ -1,0 +1,11 @@
+{
+  "category": "Days of the Week",
+  "data": [
+    {"english" : "Sunday", "kiswahili" : "Jumapili", "audio" : "jumapili.mp3" },
+    {"english" : "Monday", "kiswahili" : "Jumatatu", "audio" : "jumatatu.mp3" },
+    {"english" : "Tuesday", "kiswahili" : "Jumanne", "audio" : "jumanne.mp3" },
+    {"english" : "Wednesday", "kiswahili" : "Jumatano", "audio" : "jumatano.mp3" },
+    {"english" : "Thursday", "kiswahili" : "Alhamisi", "audio" : "alhamis.mp3" },
+    {"english" : "Friday", "kiswahili" : "Ijumaa", "audio" : "ijumaa.mp3" },
+    {"english" : "Saturday", "kiswahili" : "Jumamosi", "audio" : "jumamosi.mp3" }
+  ]
