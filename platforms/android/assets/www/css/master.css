@@ -1,6 +1,5 @@
 /* main styles */
-#quiz { overflow-y: hidden; }
-div[data-role=page] { margin-top: 3em; }
+#quiz { overflow: hidden; position: fixed; max-height: 100%;}
 div[data-role=header] {
 	position: fixed;
 	top: 0;
@@ -9,7 +8,7 @@ div[data-role=header] {
 	width: 100%;
 }
 
-/* dictionary */
+/* dictionary 
 #dictionary {
 	overflow-y: scroll;
 }
@@ -23,7 +22,7 @@ div.ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset {
 	margin: auto;
 	margin-bottom: 4px;
 }
-
+*/
 /* lessons/quizzes */
 .lessons-main { padding: 0px; }
 

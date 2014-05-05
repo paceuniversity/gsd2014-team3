@@ -1,6 +1,7 @@
 [    
     {
         "type": "lecture",
+		"score": 0,
 		"lectType": "avatar",
         "caption": "Baba mkubwa",
         "audio": "family/baba mkubwa",
@@ -8,6 +9,7 @@
     },
     {
         "type": "lecture",
+		"score": 0,
 		"lectType": "avatar",
         "caption": "Mama mkubwa",
         "audio": "family/mama mkubwa",
@@ -15,6 +17,7 @@
     },
 	{
         "type": "quiz",
+		"score": 0,
         "caption": "Hey, do you remember what 'Mama mkubwa' means?",
 		"hint": "she gave birth to you",
         "answers": [
@@ -23,6 +26,7 @@
     },
     {
         "type": "quiz",
+		"score": 0,
         "caption": "How about <b>Me gusta huevos</b> means?",
 		"hint": "it's round and <i>oval</i>",
         "answers": [
@@ -34,6 +38,7 @@
     },
     {
         "type": "quiz",
+		"score": 0,
         "caption": "How about <b>Te amo</b> means?",
 		"hint": "it's round and <i>oval</i>",
         "answers": [

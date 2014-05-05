@@ -19,7 +19,7 @@ $(document).on('pageshow', '#quiz', function() {
 		setUpNextPanel();
 	});
 });
-
+	
 function setUpNextPanel() {
 	// stop audio if playing
 	stopAudio();
@@ -214,10 +214,6 @@ function initLecture(data) {
 		$("#multimediaPanel .media-container").html(avatar).append(info);
 		avatar.html(eyebrows).append(mouth);
 		
-		// load the sound
-		//var myaudio = new Media("data/audio/greetings/habari za mchana.mp3");
-	//	loadSound("data/audio/greetings/habari za mchana.mp3");
-		
 		// when the avatar is clicked, replay the sound file
 		avatar.click(function() {
 			// load the sound
@@ -225,7 +221,6 @@ function initLecture(data) {
 				playAudio('data/audio/' + data.audio + '.mp3');
 			else
 				$(".info").html("Audio not available");
-			//my_media.play();
 		});
 	}
 
