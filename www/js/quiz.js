@@ -1,9 +1,9 @@
 var videoPlayer;
 var answerScore = 4; // default is 4; decrements by 1 each time a user gets something wrong until zero
-var k = 0; // current panel count (panel is a quiz or a lecture)
-var data;
+var data, k;
 
 $(document).on('pageshow', '#quiz', function() {
+	k = 0; // current panel count (panel is a quiz or a lecture)
 	// set height of multimedia panel to fit screen
 	var multimediaHeight = screen.height
 		- $("div[data-role=header]").height()
