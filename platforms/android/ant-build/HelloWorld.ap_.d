@@ -173,8 +173,12 @@ C:\wamp\www\gsd2014-team3\platforms\android\assets\www\data\audio\greetings\marh
 C:\wamp\www\gsd2014-team3\platforms\android\assets\www\data\audio\greetings\nzuri.mp3 \
 C:\wamp\www\gsd2014-team3\platforms\android\assets\www\data\audio\greetings\shikamoo.mp3 \
 C:\wamp\www\gsd2014-team3\platforms\android\assets\www\data\audio\greetings\sijambo.mp3 \
+C:\wamp\www\gsd2014-team3\platforms\android\assets\www\data\dictionary\daysoftheweek.json \
+C:\wamp\www\gsd2014-team3\platforms\android\assets\www\data\dictionary\family.json \
+C:\wamp\www\gsd2014-team3\platforms\android\assets\www\data\dictionary\greetings.json \
 C:\wamp\www\gsd2014-team3\platforms\android\assets\www\data\dictionary\template1.json \
 C:\wamp\www\gsd2014-team3\platforms\android\assets\www\data\dictionary\template2.json \
+C:\wamp\www\gsd2014-team3\platforms\android\assets\www\data\dictionary\time.json \
 C:\wamp\www\gsd2014-team3\platforms\android\assets\www\data\lessons\sample.json \
 C:\wamp\www\gsd2014-team3\platforms\android\assets\www\data\lessons\template1.json \
 C:\wamp\www\gsd2014-team3\platforms\android\assets\www\data\media\test.mp4 \

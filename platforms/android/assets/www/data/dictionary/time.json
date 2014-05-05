@@ -1,0 +1,14 @@
+{
+  "category": "Time",
+  "entries": [
+    {"english" : "Day", "kiswahili" : "Mchana", "audio" : "mchana.mp3" },
+    {"english" : "Night", "kiswahili" : "Usiku", "audio" : "usiku.mp3" },
+    {"english" : "At noon", "kiswahili" : "Saa sita mchana", "audio" : "saa sita mchana.mp3" },
+    {"english" : "midnight", "kiswahili" : "katikati ya usiku", "audio" : "katikati ya usiku.mp3" },
+    {"english" : "Yesterday", "kiswahili" : "Jana", "audio" : "jana.mp3" },
+    {"english" : "Last night", "kiswahili" : "Jana usiku", "audio" : "jana usiku.mp3" },
+    {"english" : "Today", "kiswahili" : "Leo", "audio" : "leo.mp3" },
+    {"english" : "Tonight", "kiswahili" : "Leo jioni", "audio" : "leo usiku.mp3" },
+    {"english" : "Tommorow", "kiswahili" : "Kesho", "audio" : "kesho.mp3" }
+ ]
+}
