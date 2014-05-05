@@ -1,6 +1,6 @@
 {
   "category": "Time",
-  "data": [
+  "entries": [
     {"english" : "", "kiswahili" : "", "audio" : "" },
     {"english" : "Day", "kiswahili" : "Mchana", "audio" : "mchana.mp3" },
     {"english" : "Night", "kiswahili" : "Usiku", "audio" : "usiku.mp3" },

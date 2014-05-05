@@ -1,6 +1,6 @@
 {
   "category": "Family",
-  "data": [
+  "entries": [
     {"english" : "mother", "kiswahili" : "mama", "audio" : "mama.mp3", "notes" : "Biological Mother (Real mother)" },
     {"english" : "father", "kiswahili" : "baba", "audio" : "baba.mp3", "notes" : "Biological Father (Real mother)" },
     {"english" : "child", "kiswahili" : "mtoto", "audio" : "mtoto.mp3" },

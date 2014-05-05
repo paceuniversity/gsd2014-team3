@@ -1,6 +1,6 @@
 {
   "category": "Days of the Week",
-  "data": [
+  "entries": [
     {"english" : "Sunday", "kiswahili" : "Jumapili", "audio" : "jumapili.mp3" },
     {"english" : "Monday", "kiswahili" : "Jumatatu", "audio" : "jumatatu.mp3" },
     {"english" : "Tuesday", "kiswahili" : "Jumanne", "audio" : "jumanne.mp3" },
