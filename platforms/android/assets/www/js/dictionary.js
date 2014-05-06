@@ -1,6 +1,6 @@
 $(document).on('pageshow', '#dictionary', function() {
 console.log("Dictionary loaded");
-  $.getJSON("data/dictionary/greetings.json", function(data) {/*you would put a variable here once we fix the chooser*/
+  $.getJSON("data/dictionary/"+option, function(data) {/*you would put a variable here once we fix the chooser*/
     console.log(data.category);
     for (i=0; i<data.entries.length; i++) {
       var classname="ui-li-static ui-body-inherit";
@@ -27,7 +27,7 @@ console.log("Dictionary loaded");
       }
       li.addClass(classname);
       li.attr("id", data.entries[i].english);
-      $("#dictionary").append(li);
+      $("#dictionarylist").append(li);
     }
   });
 });

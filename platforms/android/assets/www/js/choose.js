@@ -1,25 +1,30 @@
-var categories=[]
 $(document).on('pageshow', '#conversation-chooser', function() {
   $.getJSON("data/master.json", function(data) {
-    console.log(data.available);
-    console.log("debug");
-    console.log(data.available);
     var completed=[];
-    $.each( data.available, function(index, value) {
+    for (i=0; i<data.available.length; i++) {
       var classname="ui-li-static ui-body-inherit";
-      if (index==0) {
+      if (i==0) {
         classname+=" ui-first-child";
-      }else if (index==data.available.length-1) {
+      }
+      if (i==data.available.length-1) {
         classname+=" ui-last-child";
       }
+      var h3=$("<h3></h3>");
+      var p=$("<p></p>");
+      h3.html(data.available[i].Category);
+      p.html(data.available[i].Description);
       var li=$("<li></li>");
-      li.html(value.Description);
+      li.append(h3);
+      li.append(p);
       li.addClass(classname);
-      li.attr("id", value.Category);
-      categories.push(li);
-    });
-    for (i=0; i<categories.length; i++) {
-      $("#catlist").append(categories[i]);
+      li.attr("data-filename", data.available[i].File);
+      //where we store the filename for the JSON
+      li.attr("id", data.available[i].Category);
+      li.click(function(){
+        option=$(this).attr("data-filename");
+        console.log(option);
+      });
+      $("#catlist").append(li);
     }
   });
 });

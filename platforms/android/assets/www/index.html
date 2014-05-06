@@ -5,17 +5,20 @@
 	<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css">
 	<link rel="stylesheet" href="css/quiz.css">
 	<link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/choosers.css">
+  <link rel="stylesheet" href="css/dictionary.css">
 	<script src="js/jquery-1.10.2.min.js"></script>
 	<script src="js/jquery.mobile.custom.min.js"></script>
 	<script src="js/master.js" id="panel-init"></script>
-	<script src="cordova.js"></script>
+<!-- 	 <script src="cordova.js"></script> -->
 	<script type="text/javascript" charset="utf-8" src="js/audio.js"></script>
     <script src="js/dictionary.js" id="panel-init"></script>
 	<script src="js/quiz.js"></script>
 	<script src="js/choose.js" id="panel-init"></script>
+	<script src="js/dictchooser.js" id="panel-init"></script>
 </head>
 
-<body>
+<body style="overflow-y: hidden">
 
 <div data-role="page" id="index">
 	<div data-role="header" data-theme="a" data-position="fixed">
@@ -29,6 +32,7 @@
 	<br />
 	<a href="lesson.html">Take a sample quiz...</a><br />
 	<a href="choose.html">choose category...</a><br />
+	<a href="category.html">Choose a dictionary</a><br />
 	<a href="dictionary.html">Check your dictionary</a>
 	<a href="#" id="audi" onclick="playAudio('data/audio/greetings/chechei.mp3')">Play audio</a>
 	<a href="#" id="ff" onclick="alert(window.location.pathname)">Current dir</a>
