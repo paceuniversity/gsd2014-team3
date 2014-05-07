@@ -1,3 +1,4 @@
+var option="" //our global variable for category choice.
 $(document).bind('mobileinit', function() {
   	$(document).on('tap', function(e) {
   		$('.activeOnce').removeClass($.mobile.activeBtnClass);
@@ -5,10 +6,10 @@ $(document).bind('mobileinit', function() {
 });
 
 $( document ).on( "mobileinit", function() {
- 
+
   // We want popups to cover the page behind them with a dark background
   $.mobile.popup.prototype.options.overlayTheme = "b";
- 
+
   // Set a namespace for jQuery Mobile data attributes
 //  $.mobile.ns = "jqm-";
   alert('test');
@@ -23,7 +24,7 @@ $(document).on('pageload', function() {
   $(document).bind("pagebeforecreate", function(event, ui) {
     console.log("The DOM is untouched by jQM");
   });
-  
+
   $(document).bind("pagebeforeshow", function(event, ui) {
 	var loader = $("<div></div>");
 	$("div[data-role=page]").wrap(loader.hide());

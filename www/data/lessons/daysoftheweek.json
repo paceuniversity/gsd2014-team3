@@ -1,0 +1,143 @@
+[
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "Habari, how is everything?",
+    "audio" : "greetings/habari",
+    "english" : "hello"
+  },
+  {
+    "type" : "text",
+    "caption" : "Today, we'll be talking about the days of the week.",
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "The word for Sunday is Jumapili",
+    "audio" : "daysoftheweek/jumapili",
+    "english" : "Sunday"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "The word for Monday is Jumatatu",
+    "audio" : "daysoftheweek/jumatatu",
+    "english" : "Monday"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "The word for Tuesday is Jumanne",
+    "audio" : "daysoftheweek/jumanne",
+    "english" : "Tuesday"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "The word for Wednesday is Jumatano",
+    "audio" : "daysoftheweek/jumatano",
+    "english" : "Wednesday"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "The word for Thursday is Alhamis",
+    "audio" : "daysoftheweek/alhamis",
+    "english" : "Thursday"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "The word for Friday is Ijumaa",
+    "audio" : "daysoftheweek/ijumaa",
+    "english" : "Friday"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "The word for Saturday is Jumamosi",
+    "audio" : "daysoftheweek/jumamosi",
+    "english" : "Saturday"
+  },
+  {
+    "type" : "text",
+    "caption" : "Now, let's review."
+  },
+  {
+    "type": "quiz",
+    "caption": "Do you remember what Jumapili means?",
+    "hint": "test hint",
+    "answers": [
+      "Sunday",
+      "Saturday",
+      "Yesterday",
+      "Today"
+    ]
+  },
+  {
+    "type": "quiz",
+    "caption": "Do you remember what Jumamosi means?",
+    "hint": "test hint",
+    "answers": [
+      "Saturday",
+      "Caturday",
+      "Birthday",
+      "Tuesday"
+    ]
+  },
+    {
+    "type": "quiz",
+    "caption": "Do you remember what Jumatano means?",
+    "hint": "test hint",
+    "answers": [
+      "Wednesday",
+      "Friday",
+      "Last Week",
+      "Good Day"
+    ]
+  },
+    {
+    "type": "quiz",
+    "caption": "Do you remember what Jumatatu means?",
+    "hint": "test hint",
+    "answers": [
+      "Monday",
+      "Fun Day",
+      "Yesterday",
+      "Tuesday"
+    ]
+  },
+    {
+    "type": "quiz",
+    "caption": "Do you remember what Alhamis means?",
+    "hint": "test hint",
+    "answers": [
+      "Thursday",
+      "All Day",
+      "Friday",
+      "Sunday"
+    ]
+  },
+    {
+    "type": "quiz",
+    "caption": "Do you remember what Ijumaa means?",
+    "hint": "test hint",
+    "answers": [
+      "Friday",
+      "Saturday",
+      "Yesterday",
+      "Caturday"
+    ]
+  },
+    {
+    "type": "quiz",
+    "caption": "Do you remember what Jumanne means?",
+    "hint": "test hint",
+    "answers": [
+      "Tuesday",
+      "Saturday",
+      "Holiday",
+      "Funday"
+    ]
+  }
+]
