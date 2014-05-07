@@ -1,7 +1,5 @@
 $(document).on('pageshow', '#dict-chooser', function() {
   $.getJSON("data/master.json", function(data) {
-    console.log("Debug");
-    console.log(data.unlockedDictionaries);
     for (i=0; i<data.unlockedDictionaries.length; i++) {
       var classname="ui-li-static ui-body-inherit";
       if (i==0) {
@@ -12,7 +10,6 @@ $(document).on('pageshow', '#dict-chooser', function() {
       }
       var h3=$("<h3></h3>").html(data.unlockedDictionaries[i].Category);
       var link=$("<a></a>").attr("href", "data/dictionaries/"+data.unlockedDictionaries[i].File);
-      console.log(link);
       var li=$("<li></li>");
       li.append(h3);
       li.addClass(classname);

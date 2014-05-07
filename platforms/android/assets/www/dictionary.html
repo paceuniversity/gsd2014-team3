@@ -17,7 +17,7 @@
 
   <div data-role="page" id="dictionary">
     <div data-theme="a" data-role="header">
-      <a href="index.html" data-icon="home" data-iconpos="notext" class="ui-btn-left jqm-home">Home</a>
+      <a href="index.html" data-icon="home" data-iconpos="notext" class="ui-btn-left jqm-home" id="homelink">Home</a>
       <h1>Dictionary</h1>
       <a href="#popupDialog" data-icon="sort" data-iconpos="notext" class="ui-btn-right jqm-home" data-rel="popup" data-transition="pop" data-position-to="window" id="sort">Sort</a>
 		  <input type="text" id="dictionarySearch">
@@ -32,16 +32,20 @@
   <!--End dict list-->
   <!-- Begin sort dialog -->
     <div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="a" class="ui-corner-all">
-      <div data-role="header" data-theme="d" class="ui-corner-top">
-        <h1>Sort&nbsp;by</h1>
-      </div>
+      <h3>Sort&nbsp;by</h3>
       <div data-role="content" data-theme="d" style="padding-top:45px;" class="ui-corner-bottom">
-        <a href="docs-dialogs.html" data-role="button" data-rel="back" data-theme="b">English</a>
-        <a href="docs-dialogs.html" data-role="button" data-rel="back" data-theme="b">Kiswahili</a>
-        <a href="docs-dialogs.html" data-role="button" data-rel="back" data-theme="b">Category</a>
+        <a href="docs-dialogs.html" data-role="button" data-rel="back" data-theme="b" id="english">English</a>
+        <a href="docs-dialogs.html" data-role="button" data-rel="back" data-theme="b" id="kiswahili">Kiswahili</a>
       </div>
     </div>
     <!-- End hint dialog -->
+    <!-- begin notes dialog -->
+    <div data-role="popup" id="notes" data-overlay-theme="b" data-theme="a" class="ui-corner-all">
+      <h3>Notes</h3>
+      <div data-role="content" data-theme="d" style="padding-top:45px;" class="ui-corner-bottom" id="note">
+      </div>
+    </div>
+    <!-- end notes dialog -->
   </div>
 
   </body>

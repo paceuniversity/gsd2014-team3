@@ -8,21 +8,6 @@ div[data-role=header] {
 	width: 100%;
 }
 
-/* dictionary 
-#dictionary {
-	overflow-y: scroll;
-}
-
-.dictionary-main {
-	padding: 0.75em;
-}
-
-div.ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset {
-	width: 95%;
-	margin: auto;
-	margin-bottom: 4px;
-}
-*/
 /* lessons/quizzes */
 .lessons-main { padding: 0px; }
 
@@ -60,7 +45,7 @@ div.ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset {
 /* fluid grid for multiple choice and sentence-writing panels */
 .my-breakpoint.ui-grid-a .ui-block-a { padding: 7px 5px 0px 5px; }
 .my-breakpoint.ui-grid-b .ui-block-a,
-.my-breakpoint.ui-grid-b .ui-block-b, 
+.my-breakpoint.ui-grid-b .ui-block-b,
 .my-breakpoint.ui-grid-b .ui-block-c { width: 42%; }
 .my-breakpoint.ui-grid-b .ui-block-a { clear: left; }
 .my-breakpoint.ui-grid-b .ui-block-b {
