@@ -1,4 +1,56 @@
 /* main styles */
+@font-face
+{
+  font-family: pristina;
+  src: url(fonts/pristina.ttf);
+}
+html, body, div, a {
+	font-family:pristina!important;
+}
+/*for home screen*/
+div#homescreen {
+		height: 90%;
+    width: 90%;
+    position: fixed;
+    top: 10%;
+    left: 5%;
+}
+div#homescreen h1 {
+    text-align: center;
+    font-size: 3em;
+}
+h3 {
+	font-size:1.2em!important;
+	letter-spacing:.05em!important;
+}
+p {
+	font-size:1.05em!important;
+	letter-spacing:.05em!important;
+}
+#buttons-container {
+    position: fixed;
+    bottom: 20%;
+    width: 90%;
+}
+div.ui-block-a, div.ui-block-b {
+    margin: 1% 1% 1% 1%;
+}
+.ui-grid-a>.ui-block-a, .ui-grid-a>.ui-block-b {
+	width: 48%;
+}
+#abutton {
+	background-image:url(../img/about.png);
+}
+#cbutton {
+	background-image:url(../img/conversation.png);
+}
+#dbutton {
+	background-image:url(../img/dictionary.png);
+}
+#pbutton {
+	background-image:url(../img/progress.png);
+}
+
 #quiz { overflow: hidden; position: fixed; max-height: 100%;}
 div[data-role=header] {
 	position: fixed;
