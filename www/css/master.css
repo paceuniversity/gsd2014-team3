@@ -153,5 +153,17 @@ div.ui-block-a, div.ui-block-b {
     margin: 1% 1% 1% 1%;
 }
 .ui-grid-a>.ui-block-a, .ui-grid-a>.ui-block-b {
-width: 48%;
+	width: 48%;
+}
+#abutton {
+	background-image:url(../img/about.png);
+}
+#cbutton {
+	background-image:url(../img/conversation.png);
+}
+#dbutton {
+	background-image:url(../img/dictionary.png);
+}
+#pbutton {
+	background-image:url(../img/progress.png);
 }
