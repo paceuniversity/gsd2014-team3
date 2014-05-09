@@ -4,9 +4,9 @@
   font-family: pristina;
   src: url(fonts/pristina.ttf);
 }
-html, body, div {
+/*html, body, div {
   font-family:pristina!important;
-}
+}*/
 /*for home screen*/
 div#homescreen {
     height: 90%;
