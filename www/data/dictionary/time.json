@@ -8,7 +8,7 @@
     {"english" : "Yesterday", "kiswahili" : "Jana", "audio" : "jana.mp3" },
     {"english" : "Last night", "kiswahili" : "Jana usiku", "audio" : "jana usiku.mp3" },
     {"english" : "Today", "kiswahili" : "Leo", "audio" : "leo.mp3" },
-    {"english" : "Tonight", "kiswahili" : "Leo jioni", "audio" : "leo usiku.mp3" },
+    {"english" : "Tonight", "kiswahili" : "Leo usiku", "audio" : "leo usiku.mp3" },
     {"english" : "Tommorow", "kiswahili" : "Kesho", "audio" : "kesho.mp3" }
  ]
 }
