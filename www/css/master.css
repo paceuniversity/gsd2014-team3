@@ -86,15 +86,8 @@ div[data-role=header] {
   width: 100%;
 }
 
-
-
-
-
-
-
-
 /* main styles */
-#quiz { overflow: hidden; position: fixed; max-height: 100%;}
+#quiz { overflow: hidden; position: fixed; max-height: 100%; margin-top: 40px;}
 div[data-role=header] {
 	position: fixed;
 	top: 0;
@@ -105,8 +98,10 @@ div[data-role=header] {
 
 /* lessons/quizzes */
 .lessons-main { padding: 0px; }
+.lessons-main h2 { text-align: center;}
+#hint { display: none }
 
-#sentencewritingPanel, #multiplechoicePanel, #continuePanel {
+#sentencewritingPanel, #multiplechoicePanel, #continuePanel, #mainMenuPanel {
 	display: none;
 	background:#000;
 	color:#fff;
@@ -218,7 +213,6 @@ div[data-role=header] {
 
 .avg-score-star {
 	background-size:100%;
-	display:none;
 	margin: auto;
 	width: 200px;
 	height: 200px;
