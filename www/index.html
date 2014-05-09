@@ -23,17 +23,19 @@
 <div data-role="page" id="index">
 	<div id="homescreen">
 		<h1>Jifunze Kiswahili</h1>
-		<a href="category.html">dict</a>
-		<a href="choose.html">convo</a>
-		<a href="lesson.html">lesson</a>
+		<a href="lesson.html">DEBUG: lesson link</a>
 		<div id="buttons-container" class="ui-grid-a">
-			<div class="ui-block-a" id="dbutton"></div>
-			<div class="ui-block-b" id="abutton"></div>
-			<div class="ui-block-a" id="cbutton"></div>
-			<div class="ui-block-b" id="pbutton"></div>
+			<a href="category.html"><div class="ui-block-a" id="dbutton"></div></a>
+			<a href="#about" data-rel="popup" data-transition="pop" data-position-to="window"><div class="ui-block-b" id="abutton"></div></a>
+			<a href="choose.html"><div class="ui-block-a" id="cbutton"></div></a>
+			<a href="progress.html"><div class="ui-block-b" id="pbutton"></div></a>
 		</div>
 	</div>
-
+  <div data-role="popup" id="about" data-overlay-theme="b" data-theme="a" class="ui-corner-all">
+    <h3>About</h3>
+    <div data-role="content" data-theme="d" class="ui-corner-bottom">Jifunze Kiswahili is a fun and intuitive app for an english-speaker to learn Swahili. Tap on the conversation icon to start learning. Once you unlock some dictionaries through conversation, you can tap on the dictionary icon to review what you have learned! Have Fun!
+    </div>
+  </div>
 	<!-- <a href="#" id="audi" onclick="playAudio('data/audio/greetings/chechei.mp3')">Play audio</a>
 	<a href="#" id="ff" onclick="alert(window.location.pathname)">Current dir</a>
 	<span id="audio_position"></span> -->

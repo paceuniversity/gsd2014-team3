@@ -5,11 +5,11 @@
   src: url(fonts/pristina.ttf);
 }
 html, body, div, a {
-	font-family:pristina!important;
+  font-family:pristina!important;
 }
 /*for home screen*/
 div#homescreen {
-		height: 90%;
+    height: 90%;
     width: 90%;
     position: fixed;
     top: 10%;
@@ -20,78 +20,107 @@ div#homescreen h1 {
     font-size: 3em;
 }
 h3 {
-	font-size:1.2em!important;
-	letter-spacing:.05em!important;
+  font-size:1.2em!important;
+  letter-spacing:.05em!important;
 }
 p {
-	font-size:1.05em!important;
-	letter-spacing:.05em!important;
+  font-size:1.05em!important;
+  letter-spacing:.05em!important;
 }
+/*start index css*/
 #buttons-container {
     position: fixed;
     bottom: 20%;
     width: 90%;
 }
 div.ui-block-a, div.ui-block-b {
-    margin: 1% 1% 1% 1%;
+    margin: 1% 1% 5% 1%;
 }
-.ui-grid-a>.ui-block-a, .ui-grid-a>.ui-block-b {
-	width: 48%;
+.ui-grid-a a >.ui-block-a, .ui-grid-a a >.ui-block-b {
+  width: 48%;
+}
+#abutton, #cbutton, #dbutton, #pbutton {
+  background-repeat:no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 5em;
 }
 #abutton {
-	background-image:url(../img/about.png);
+  background-image:url(../img/about.png);
 }
 #cbutton {
-	background-image:url(../img/conversation.png);
+  background-image:url(../img/conversation.png);
 }
 #dbutton {
-	background-image:url(../img/dictionary.png);
+  background-image:url(../img/dictionary.png);
 }
 #pbutton {
-	background-image:url(../img/progress.png);
+  background-image:url(../img/progress.png);
+}
+div#about-popup {
+  top:15em!important;
+  left:1em!important;
+  right:1em!important;
 }
 
+div#about {
+  padding: 2%;
+  margin: auto 1em;
+}
+div#about > h3 {
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: solid 1px;
+}
+div#about > div {
+  font-size:1.05em;
+  letter-spacing: 0.1em;
+  line-height:1.5em;
+  margin: 0.5em;
+  text-align: justify;
+}
+/*end index css*/
 #quiz { overflow: hidden; position: fixed; max-height: 100%;}
 div[data-role=header] {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1001;
-	width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  width: 100%;
 }
 
 /* lessons/quizzes */
 .lessons-main { padding: 0px; }
 
 #sentencewritingPanel, #multiplechoicePanel, #continuePanel {
-	display: none;
-	background:#000;
-	color:#fff;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
+  display: none;
+  background:#000;
+  color:#fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 #sentencewritingPanel textarea { height: 100%; width: 100%;}
 
 #multimediaPanel {
-	background: red;
-	padding: 10px;
+  background: red;
+  padding: 10px;
 }
 
 #multimediaPanel .media-container {
-	width: 100%;
-	background: #c0c0c0;
+  width: 100%;
+  background: #c0c0c0;
 }
 
 #multimediaPanel video, #multimediaPanel img {
-	vertical-align: middle;
+  vertical-align: middle;
 }
 
 #multimediaPanel .caption {
-	background: #c0c0c0;
-	padding: 10px;
-	margin-top: 6px;
+  background: #c0c0c0;
+  padding: 10px;
+  margin-top: 6px;
 }
 
 /* fluid grid for multiple choice and sentence-writing panels */
@@ -101,108 +130,108 @@ div[data-role=header] {
 .my-breakpoint.ui-grid-b .ui-block-c { width: 42%; }
 .my-breakpoint.ui-grid-b .ui-block-a { clear: left; }
 .my-breakpoint.ui-grid-b .ui-block-b {
-	text-align: center;
-	vertical-align: middle;
-	width: 16%;
-	padding-top: 20px;
+  text-align: center;
+  vertical-align: middle;
+  width: 16%;
+  padding-top: 20px;
 }
 
 .my-breakpoint.ui-grid-a .ui-block-a,
 .my-breakpoint.ui-grid-a .ui-block-b { width: 70%; }
 .my-breakpoint.ui-grid-a .ui-block-a { clear: left; }
 .my-breakpoint.ui-grid-a .ui-block-b {
-	text-align: center;
-	vertical-align: middle;
-	width: 30%;
+  text-align: center;
+  vertical-align: middle;
+  width: 30%;
 }
 
 .hint-icon {
-	background: url('../img/hint-icon.png');
-	width: 48px;
-	height: 48px;
-	display: inline-block;
-	vertical-align: middle;
+  background: url('../img/hint-icon.png');
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* avatar and facial features */
 .avatar {
-	background-image: url('../img/avatar.png');
-	background-size:100%;
-	width: 100%;
-	height: 100%;
+  background-image: url('../img/avatar.png');
+  background-size:100%;
+  width: 100%;
+  height: 100%;
 }
 
 .info {
-	background-color: #e8e8e8;
-	padding: 5px;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	font-size: small;
-	font-weight: bold;
-	margin: auto;
-	margin-top: -40px;
-	width: 30%;
-	text-align: center;
-	display: none;
+  background-color: #e8e8e8;
+  padding: 5px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  font-size: small;
+  font-weight: bold;
+  margin: auto;
+  margin-top: -40px;
+  width: 30%;
+  text-align: center;
+  display: none;
 }
 
 .eyebrows {
-	background: url('../img/eyebrows.png');
-	display: block;
-	margin: auto;
-	width: 90px;
-	position: relative;
-	top: 27%;
-	background-size:100%;
-	height: 20px;
+  background: url('../img/eyebrows.png');
+  display: block;
+  margin: auto;
+  width: 90px;
+  position: relative;
+  top: 27%;
+  background-size:100%;
+  height: 20px;
 }
 
 .up { background-position: top center;}
 .down { background-position: bottom center;}
 
 .mouth {
-	background-image: url('../img/mouth.png');
-	background-repeat: no-repeat;
-	display: block;
-	margin: auto;
-	width: 15%;
-	height: 5%;
-	position: relative;
-	top: 41%;
-	background-size:100%;
+  background-image: url('../img/mouth.png');
+  background-repeat: no-repeat;
+  display: block;
+  margin: auto;
+  width: 15%;
+  height: 5%;
+  position: relative;
+  top: 41%;
+  background-size:100%;
 }
 
 .avg-score-star {
-	background-size:100%;
-	display:none;
-	margin: auto;
-	width: 200px;
-	height: 200px;
+  background-size:100%;
+  display:none;
+  margin: auto;
+  width: 200px;
+  height: 200px;
 }
 
 .avg-score-star-good {
-	background-image: url('../img/star-good.png');
+  background-image: url('../img/star-good.png');
 }
 
 .avg-score-star-bad {
-	background-image: url('../img/star-bad.png');
+  background-image: url('../img/star-bad.png');
 }
 
 .avg-score-star-medium {
-	background-image: url('../img/star-medium.png');
+  background-image: url('../img/star-medium.png');
 }
 
 .avg-score-star div {
-	background-image: url('../img/star-overlay.png');
-	background-size:100%;
-	width: 200px;
-	height: 200px;
-	margin-top: 40px;
-	text-align: center;
-	font-size: 36px;
-	color: #fff;
-	font-weight: bold;
+  background-image: url('../img/star-overlay.png');
+  background-size:100%;
+  width: 200px;
+  height: 200px;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 36px;
+  color: #fff;
+  font-weight: bold;
 }
 
 .smile { background-position: top center; }
@@ -221,5 +250,5 @@ div.ui-header.ui-bar-a.ui-header-fixed.slidedown {
     padding-top: 0;
 }
 .ui-header-fixed .ui-btn-left, .ui-header-fixed .ui-btn-right {
-	margin-top:0px!important;
+  margin-top:0px!important;
 }
