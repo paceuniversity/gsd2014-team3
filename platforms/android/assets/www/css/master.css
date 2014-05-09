@@ -4,8 +4,17 @@
   font-family: pristina;
   src: url(fonts/pristina.ttf);
 }
-html, body, div, .ui-btn {
+html, body, div, .ui-btn, * {
   font-family:pristina!important;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    outline:none;
+    -webkit-focus-ring-color:rgba(0 0 0 0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 /*for home screen*/
 div#homescreen {

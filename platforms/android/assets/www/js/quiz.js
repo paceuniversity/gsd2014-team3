@@ -5,6 +5,7 @@ var data, myaudio;
 	
 // TODO: must be dynamic...
 var lesson = "sample";
+var lessonName = "Sample Quiz2";
 
 $(document).on('pageshow', '#quiz', function() {
 	// remove new storage
@@ -21,6 +22,8 @@ $(document).on('pageshow', '#quiz', function() {
 		data = dat;
 		setUpNextPanel();
 	});
+	
+	$("#lessonName").html(lessonName);
 	
 	$("#hintTrigger").click(function() {
 		alert($("#hint").html());
