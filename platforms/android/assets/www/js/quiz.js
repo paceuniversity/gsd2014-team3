@@ -29,7 +29,6 @@ $(document).on('pageshow', '#quiz', function() {
 	
 function setUpNextPanel() {
 	// reset quiz functions
-	console.log(lessonScore + ", " + answerScore);
 	stopAudio();
 	
 	var newDat = {
@@ -68,7 +67,6 @@ function renderProgressReport() {
 		var finalScore = (lessonDataJSON.lessonScore/lessonDataJSON.quizCount).toFixed(2);
 	} else
 		var finalScore = 4;
-	console.log(lessonDataJSON);
 
 	var report = $(".avg-score-star");
 	if(finalScore >= 4) {

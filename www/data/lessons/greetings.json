@@ -7,45 +7,6 @@
     "english" : "hello"
   },
   {
-    "type" : "text",
-    "caption" : "Today, we'll be talking about ways to describe time."
-  },
-  {
-    "type" : "lecture",
-    "lectType" : "avatar",
-    "caption" : "The word for Day is Mchana",
-    "audio" : "time/mchana",
-    "english" : "Day"
-  },
-  {
-    "type" : "lecture",
-    "lectType" : "avatar",
-    "caption" : "The word for Day is Mchana",
-    "audio" : "time/mchana",
-    "english" : "Day"
-  },
-  {
-    "type" : "lecture",
-    "lectType" : "avatar",
-    "caption" : "The word for Day is Mchana",
-    "audio" : "time/mchana",
-    "english" : "Day"
-  },
-  {
-    "type" : "lecture",
-    "lectType" : "avatar",
-    "caption" : "The word for Day is Mchana",
-    "audio" : "time/mchana",
-    "english" : "Day"
-  },
-  {
-    "type" : "lecture",
-    "lectType" : "avatar",
-    "caption" : "The word for Day is Mchana",
-    "audio" : "time/mchana",
-    "english" : "Day"
-  },
-  {
     "type" : "lecture",
     "lectType" : "avatar",
     "caption" : "The word for Day is Mchana",
@@ -107,10 +68,6 @@
     "caption" : "Tomorrow will be a great day, that is, Kesho will be a great day.",
     "audio" : "time/kesho",
     "english" : "Tomorrow"
-  },
-  {
-    "type" : "text",
-    "caption" : "Now, let's review."
   },
   {
     "type": "quiz",

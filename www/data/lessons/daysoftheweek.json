@@ -7,10 +7,6 @@
     "english" : "hello"
   },
   {
-    "type" : "text",
-    "caption" : "Today, we'll be talking about the days of the week."
-  },
-  {
     "type" : "lecture",
     "lectType" : "avatar",
     "caption" : "The word for Sunday is Jumapili",
