@@ -8,60 +8,96 @@
   },
   {
     "type" : "text",
-    "caption" : "Today, we'll be talking about the days of the week."
+    "caption" : "Today, we'll be talking about ways to describe time."
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
-    "caption" : "The word for Sunday is Jumapili",
-    "audio" : "daysoftheweek/jumapili",
+    "caption" : "The word for Day is Mchana",
+    "audio" : "time/jumapili",
     "english" : "Sunday"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
     "caption" : "The word for Monday is Jumatatu",
-    "audio" : "daysoftheweek/jumatatu",
+    "audio" : "time/jumatatu",
     "english" : "Monday"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
     "caption" : "The word for Tuesday is Jumanne",
-    "audio" : "daysoftheweek/jumanne",
+    "audio" : "time/jumanne",
     "english" : "Tuesday"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
     "caption" : "The word for Wednesday is Jumatano",
-    "audio" : "daysoftheweek/jumatano",
+    "audio" : "time/jumatano",
     "english" : "Wednesday"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
     "caption" : "The word for Thursday is Alhamis",
-    "audio" : "daysoftheweek/alhamis",
+    "audio" : "time/alhamis",
     "english" : "Thursday"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
     "caption" : "The word for Friday is Ijumaa",
-    "audio" : "daysoftheweek/ijumaa",
+    "audio" : "time/ijumaa",
     "english" : "Friday"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
     "caption" : "The word for Saturday is Jumamosi",
-    "audio" : "daysoftheweek/jumamosi",
+    "audio" : "time/jumamosi",
+    "english" : "Saturday"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "The word for Saturday is Jumamosi",
+    "audio" : "time/jumamosi",
+    "english" : "Saturday"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "The word for Saturday is Jumamosi",
+    "audio" : "time/jumamosi",
     "english" : "Saturday"
   },
   {
     "type" : "text",
     "caption" : "Now, let's review."
+  },
+  {
+    "type": "quiz",
+    "caption": "Do you remember what Jumapili means?",
+    "hint": "Most people go to church on this day.",
+    "answers": [
+      "Sunday",
+      "Saturday",
+      "Yesterday",
+      "Today"
+    ]
+  },
+  {
+    "type": "quiz",
+    "caption": "Do you remember what Jumapili means?",
+    "hint": "Most people go to church on this day.",
+    "answers": [
+      "Sunday",
+      "Saturday",
+      "Yesterday",
+      "Today"
+    ]
   },
   {
     "type": "quiz",
