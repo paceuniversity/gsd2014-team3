@@ -23,6 +23,8 @@ $(document).on('pageshow', '#conversation-chooser', function() {
       li.click(function(){
         option=$(this).attr("data-filename");
         console.log(option);
+		lesson = option.replace(".json", "");
+		$("body").pagecontainer("change", "lesson.html");
       });
       $("#catlist").append(li);
     }

@@ -1,4 +1,7 @@
-var option="" //our global variable for category choice.
+var option="", //our global variable for category choice.
+lesson = "",
+lessonName = "";
+
 $(document).bind('mobileinit', function() {
   	$(document).on('tap', function(e) {
   		$('.activeOnce').removeClass($.mobile.activeBtnClass);
