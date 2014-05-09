@@ -103,6 +103,16 @@ label.ui-btn {
 	/* Note: change this radius to 1em if you want the old, more rounded, button corner style. */
 	-webkit-border-radius: 				.3125em /*{global-radii-buttons}*/;
 	border-radius: 						.3125em /*{global-radii-buttons}*/;
+	background: 			#c0c0c0 /*{a-bup-background-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #fff /*{a-bup-background-start}*/), to( #c0c0c0 /*{a-bup-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #fff /*{a-bup-background-start}*/, #c0c0c0 /*{a-bup-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #fff /*{a-bup-background-start}*/, #c0c0c0 /*{a-bup-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #fff /*{a-bup-background-start}*/, #c0c0c0 /*{a-bup-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #fff /*{a-bup-background-start}*/, #c0c0c0 /*{a-bup-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #fff /*{a-bup-background-start}*/, #c0c0c0 /*{a-bup-background-end}*/);
+	border-color:	 		#c0c0c0 /*{a-bup-border}*/;
+	color: 					#000 /*{a-bup-color}*/;
+	text-shadow: 0;
 }
 /* Icon-only buttons */
 .ui-btn-icon-notext.ui-btn-corner-all,
@@ -276,15 +286,15 @@ html .ui-bar-a .ui-body-inherit,
 html .ui-body-a .ui-body-inherit,
 html body .ui-group-theme-a .ui-body-inherit,
 html .ui-panel-page-container-a {
-	background: 			#e8e8e8 /*{a-body-background-color}*/;
-	background-image: -webkit-gradient(linear, left top, left bottom, from( #fff /*{a-body-background-start}*/), to( #e8e8e8 /*{a-body-background-end}*/)); /* Saf4+, Chrome */
-	background-image: -webkit-linear-gradient( #fff /*{a-body-background-start}*/, #e8e8e8 /*{a-body-background-end}*/); /* Chrome 10+, Saf5.1+ */
-	background-image:    -moz-linear-gradient( #fff /*{a-body-background-start}*/, #e8e8e8 /*{a-body-background-end}*/); /* FF3.6 */
-	background-image:     -ms-linear-gradient( #fff /*{a-body-background-start}*/, #e8e8e8 /*{a-body-background-end}*/); /* IE10 */
-	background-image:      -o-linear-gradient( #fff /*{a-body-background-start}*/, #e8e8e8 /*{a-body-background-end}*/); /* Opera 11.10+ */
-	background-image:         linear-gradient( #fff /*{a-body-background-start}*/, #e8e8e8 /*{a-body-background-end}*/);
-	border-color:	 		#fff /*{a-body-border}*/;
-	color: 					#fff /*{a-body-color}*/;
+	background: 			#e8e8e8 /*{a-bup-background-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #fff /*{a-bup-background-start}*/), to( #c0c0c0 /*{a-bup-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #fff /*{a-bup-background-start}*/, #c0c0c0 /*{a-bup-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #fff /*{a-bup-background-start}*/, #c0c0c0 /*{a-bup-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #fff /*{a-bup-background-start}*/, #c0c0c0 /*{a-bup-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #fff /*{a-bup-background-start}*/, #c0c0c0 /*{a-bup-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #fff /*{a-bup-background-start}*/, #c0c0c0 /*{a-bup-background-end}*/);
+	border-color:	 		#c0c0c0 /*{a-body-border}*/;
+	color: 					#000 /*{a-body-color}*/;
 	text-shadow: 0;
 }
 .ui-body-a {
@@ -461,7 +471,7 @@ html body .ui-group-theme-b .ui-bar-inherit {
 	background-image:      -o-linear-gradient( #c0c0c0 /*{b-bar-background-start}*/, #497bae /*{b-bar-background-end}*/); /* Opera 11.10+ */
 	background-image:         linear-gradient( #c0c0c0 /*{b-bar-background-start}*/, #497bae /*{b-bar-background-end}*/);
 	border-color:	 		#456f9a /*{b-bar-border}*/;
-	color: 					#fff /*{b-bar-color}*/;
+	color: 					#000 /*{a-bup-color}*/;
 	text-shadow: 0;
 	font-weight: bold;
 }

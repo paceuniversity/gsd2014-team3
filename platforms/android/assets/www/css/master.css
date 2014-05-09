@@ -251,7 +251,7 @@ div[data-role=header] {
 
 /* begin dictionary css */
 ul#dictionarylist {
-margin: 7em 1em 1em 1em;
+margin: 7em 0em 0em 0em;
 }
 
 div.ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset {
