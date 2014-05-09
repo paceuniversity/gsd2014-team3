@@ -51,20 +51,26 @@ $(document).on('pageshow', '#dictionary', function() {
         var h3=$("<h3></h3>").html(entries[i].english);
         var pstrong=$("<p></p>").append("<strong></strong>").html(entries[i].kiswahili);
       }
-      var audiv=$("<a></a>");
+      var audiv=$("<a></a>").attr("href", "#");
       audiv.addClass("ui-btn-right jqm-home audio");
-      audiv.attr("data-filename", "assets/audio/greetings/"+entries[i].audio);
-      audiv.html("audio");
+      audiv.attr("data-filename", "data/audio/greetings/"+entries[i].audio);
+	  audiv.click(function() {
+		console.log($(this).attr("data-filename"));
+		var hintAudio = new Media($(this).attr("data-filename"));
+		hintAudio.play();
+	  });
       var li=$("<li></li>");
-      li.append(h3).append(pstrong).append(audiv);
+	  var wrapper=$("<div></div>");
+      wrapper.append(h3).append(pstrong);
+	  li.append(wrapper).append(audiv);
       var p = $("<span></span>");
       if (entries[i].notes)
         p.html(entries[i].notes);
       else
         p.html("No additional notes");
       p.hide();
-      li.append(p);
-      li.click(function(){
+      wrapper.append(p);
+      wrapper.click(function(){
         $("#note").html($(this).find("span").html());
         $("#notes").popup("open");
       });

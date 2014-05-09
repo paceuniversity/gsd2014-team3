@@ -120,8 +120,6 @@ function renderQuiz(data) {
 	// when the avatar is clicked, replay the sound file
 	avatar.click(function() {
 		// reload the sound
-		if(myaudio)
-			myaudio.stop();
 		myaudio = new Media("data/audio/" + data.audio + ".mp3");
 		myaudio.play();
 	});
