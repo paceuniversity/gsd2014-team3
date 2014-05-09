@@ -1,0 +1,269 @@
+[
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "Habari, how is everything?",
+    "audio" : "greetings/habari",
+    "english" : "hello"
+  },
+  {
+    "type" : "text",
+    "caption" : "Today, we'll be talking about ways to describe time."
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "The word for Day is Mchana",
+    "audio" : "time/mchana",
+    "english" : "Day"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "The word for Day is Mchana",
+    "audio" : "time/mchana",
+    "english" : "Day"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "The word for Day is Mchana",
+    "audio" : "time/mchana",
+    "english" : "Day"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "The word for Day is Mchana",
+    "audio" : "time/mchana",
+    "english" : "Day"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "The word for Day is Mchana",
+    "audio" : "time/mchana",
+    "english" : "Day"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "The word for Day is Mchana",
+    "audio" : "time/mchana",
+    "english" : "Day"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "The word for Night is Usiku",
+    "audio" : "time/usiku",
+    "english" : "Night"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "If I want to say something is 'at noon', I say Saa sita mchana",
+    "audio" : "time/Saa sita mchana",
+    "english" : "At noon"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "For exactly 12 AM, midnight, it's Katikati ya usiku",
+    "audio" : "time/katikati ya usiku",
+    "english" : "Midnight"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "Jana was fun. Jana means Yesterday.",
+    "audio" : "time/jana",
+    "english" : "Yesterday"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "And when I want to describe last night, I say Jana usiku",
+    "audio" : "time/jana usiku",
+    "english" : "Last night"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "To describe today, I use the word Leo",
+    "audio" : "time/leo",
+    "english" : "Today"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "Let's make plans tonight, that is Leo usiku",
+    "audio" : "time/leo usiku",
+    "english" : "Tonight"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "Tomorrow will be a great day, that is, Kesho will be a great day.",
+    "audio" : "time/kesho",
+    "english" : "Tomorrow"
+  },
+  {
+    "type" : "text",
+    "caption" : "Now, let's review."
+  },
+  {
+    "type": "quiz",
+    "caption": "Do you remember what Mchana means?",
+    "hint": "The sun is out.",
+    "answers": [
+      "Day",
+      "Midnight",
+      "Yesterday",
+      "At Noon"
+    ]
+  },
+  {
+    "type": "quiz",
+    "caption": "Do you remember what Mchana means?",
+    "hint": "The sun is out.",
+    "answers": [
+      "Day",
+      "Midnight",
+      "Yesterday",
+      "At Noon"
+    ]
+  },
+  {
+    "type": "quiz",
+    "caption": "Do you remember what Mchana means?",
+    "hint": "The sun is out.",
+    "answers": [
+      "Day",
+      "Midnight",
+      "Yesterday",
+      "At Noon"
+    ]
+  },
+  {
+    "type": "quiz",
+    "caption": "Do you remember what Mchana means?",
+    "hint": "The sun is out.",
+    "answers": [
+      "Day",
+      "Midnight",
+      "Yesterday",
+      "At Noon"
+    ]
+  },
+  {
+    "type": "quiz",
+    "caption": "Do you remember what Mchana means?",
+    "hint": "The sun is out.",
+    "answers": [
+      "Day",
+      "Midnight",
+      "Yesterday",
+      "At Noon"
+    ]
+  },
+  {
+    "type": "quiz",
+    "caption": "Do you remember what Mchana means?",
+    "hint": "The sun is out.",
+    "answers": [
+      "Day",
+      "Midnight",
+      "Yesterday",
+      "At Noon"
+    ]
+  },
+  {
+    "type": "quiz",
+    "caption": "Do you remember what Leo Usiku means?",
+    "hint": "Later today, it'll be....",
+    "answers": [
+      "Tonight",
+      "Day",
+      "Next week",
+      "Night"
+    ]
+  },
+  {
+    "type": "quiz",
+    "caption": "Do you remember what Kesho means?",
+    "hint": "We'll make plans in the future. In fact how does ________ sound?",
+    "answers": [
+      "Tomorrow",
+      "Saturday",
+      "Night",
+      "Yesterday"
+    ]
+  },
+  {
+    "type": "quiz",
+    "caption": "Do you remember what Leo means?",
+    "hint": "The day that is happening right now",
+    "answers": [
+      "Today",
+      "Caturday",
+      "Birthday",
+      "Midnight"
+    ]
+  },
+    {
+    "type": "quiz",
+    "caption": "Do you remember what Katikati ya usiku means?",
+    "hint": "It's very late, you should go to bed.",
+    "answers": [
+      "Midnight",
+      "Last night",
+      "Next Week",
+      "Good Day"
+    ]
+  },
+    {
+    "type": "quiz",
+    "caption": "Do you remember what Usiku means?",
+    "hint": "After the sun has set...",
+    "answers": [
+      "Night",
+      "Last night",
+      "Today",
+      "At noon"
+    ]
+  },
+    {
+    "type": "quiz",
+    "caption": "Do you remember what Jana means?",
+    "hint": "The day before today",
+    "answers": [
+      "Yesterday",
+      "All Day",
+      "Last night",
+      "Day"
+    ]
+  },
+    {
+    "type": "quiz",
+    "caption": "Do you remember what Jana usiku means?",
+    "hint": "I'm tired today, because I didn't get much sleep ____ _____",
+    "answers": [
+      "Last night",
+      "Saturday",
+      "Today",
+      "Caturday"
+    ]
+  },
+    {
+    "type": "quiz",
+    "caption": "Do you remember what Saa sita mchana means?",
+    "hint": "Midday",
+    "answers": [
+      "At noon",
+      "Saturday",
+      "Holiday",
+      "Funday"
+    ]
+  }
+]

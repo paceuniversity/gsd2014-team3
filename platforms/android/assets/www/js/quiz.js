@@ -1,5 +1,5 @@
 var videoPlayer;
-var answerScore = 4; // default is 4; decrements by 1 each time a user gets something wrong until zero
+var answerScore = 0; // default is 4; decrements by 1 each time a user gets something wrong until zero
 var quizCount = 0, lessonScore = 0, panelCount = 0;
 var data;
 	
@@ -7,6 +7,9 @@ var data;
 var lesson = "sample";
 
 $(document).on('pageshow', '#quiz', function() {
+	// remove new storage
+	window.localStorage.removeItem(lesson + "_data", undefined);
+	
 	// set height of multimedia panel to fit screen
 	var multimediaHeight = screen.height
 		- $("div[data-role=header]").height()
@@ -18,41 +21,36 @@ $(document).on('pageshow', '#quiz', function() {
 		data = dat;
 		setUpNextPanel();
 	});
+	
+	$("#hintTrigger").click(function() {
+		alert($("#hint").html());
+	});
 });
 	
 function setUpNextPanel() {
 	// reset quiz functions
+	console.log(lessonScore + ", " + answerScore);
 	stopAudio();
 	
-	// retrieve previous lesson data
-	var lessonData = window.localStorage.getItem(lesson + "_data");
-	if(lessonData.lessonScore != undefined
-		&& lessonData.quizCount != undefined
-		&& lessonData.panelCount != undefined) {
-		lessonScore = lessonData.lessonScore;
-		quizCount = lessonData.quizCount;
-		panelCount = lessonData.panelCount;
-	}
-		
-	window.localStorage.setItem(lesson + "_data", {
-		lessonScore: parseInt(lessonScore+answerScore),
+	var newDat = {
+		lessonScore: lessonScore,
 		quizCount: quizCount,
 		panelCount: panelCount
-	});
+	};
+	window.localStorage.setItem(lesson + "_data", JSON.stringify(newDat));
 	
 	if(panelCount >= data.length) {
 		// lesson complete, redirect to progress report
 		renderProgressReport();
 	} else {
 		// lesson still going, redirect to next panel
-		console.log(panelCount + " <-- k");
 		if(data[panelCount].type == "lecture") {
-			initLecture(data[panelCount]);
 			answerScore = 0;
+			initLecture(data[panelCount]);
 		} else if(data[panelCount].type == "quiz") {
-			initQuiz(data[panelCount]);
+			lessonScore += answerScore;
 			answerScore = 4;
-			quizCount++;
+			initQuiz(data[panelCount]);
 		}
 		panelCount++;
 	}
@@ -63,25 +61,36 @@ function renderProgressReport() {
 	
 	// calculate final score for this lesson
 	var lessonData = window.localStorage.getItem(lesson + "_data");
-	if(lessonData.lessonScore != undefined
-		&& lessonData.quizCount != undefined
-		&& lessonData.panelCount != undefined) {
-		var finalScore = (lessonData.lessonScore/lessonData.quizCount);
+	var lessonDataJSON = $.parseJSON(lessonData);
+	if(lessonDataJSON.lessonScore != undefined
+		&& lessonDataJSON.quizCount != undefined
+		&& lessonDataJSON.panelCount != undefined) {
+		var finalScore = (lessonDataJSON.lessonScore/lessonDataJSON.quizCount).toFixed(2);
 	} else
 		var finalScore = 4;
-	console.log(finalScore);
+	console.log(lessonDataJSON);
 
 	var report = $(".avg-score-star");
-	if(finalScore >= 4)
+	if(finalScore >= 4) {
 		report.addClass("avg-score-star-good");
-	else if(finalScore < 4 && finalScore > 2)
+		msg = "Great work!";
+	} else if(finalScore < 4 && finalScore > 2) {
 		report.addClass("avg-score-star-medium");
-	else
+		msg = "Not bad, but you could use some practice!";
+	} else {
 		report.addClass("avg-score-star-bad");
-
+		msg = "You should work on this level. Try again?";
+	}
+	
 	// show score report to user
 	$(".avg-score-star div").html("<br><br>" + finalScore);
-	report.show();
+	$("#progressMsg").html(msg);
+	$("#mainmenu").click(function() {
+		$(this).off();
+		$("body").pagecontainer("change", "index.html");
+	}).html("Main Menu");
+	$("#progressReport").show();
+	$("#mainMenuPanel").show();
 }
 
 function cleanStr(str) {
@@ -89,8 +98,6 @@ function cleanStr(str) {
 }
 
 function initQuiz(data) {
-	quizCount++;
-	
 	// hide translation and continue buttons
 	$("#translation").fadeOut();
 	$("#continue").fadeOut();
@@ -112,15 +119,13 @@ function initQuiz(data) {
 	// when the avatar is clicked, replay the sound file
 	avatar.click(function() {
 		// reload the sound
-		//var myaudio = new Media("data/audio/" + data.audio + ".mp3");
-		//myaudio.play();
+		var myaudio = new Media("data/audio/" + data.audio + ".mp3");
+		myaudio.play();
 	});
 	
 	// if a hint is available, show the lightbulb and set the hint
-	if(data.hint != undefined) {
-		$("#hintTrigger").fadeIn();
-		$("#popupDialog p").html(data.hint);
-	}
+	if(data.hint != undefined)
+		$("#hint").html(data.hint);
 	
 	// if there are four different answers, the quiz type is multiple choice.
 	// otherwise, it is a direct answer (user types it in)
@@ -138,9 +143,8 @@ function initQuiz(data) {
 		$(".multiple-choice").click(function() {
 			$(this).off();
 			if($(this).attr("href") == "#popupCorrect") {
-				// popup was correct!
+				// answer is correct
 				alert('Correct!');
-				answerScore = 4;
 				
 				mouth.removeClass().addClass("mouth").addClass("smile");
 				eyebrows.removeClass().addClass("eyebrows").addClass("up");
@@ -166,11 +170,8 @@ function initQuiz(data) {
 	} else {
 		// set up the sentence writing panel
 		$("#sentenceSubmit").click(function() {
-			$(this).off();
 			if(cleanStr($("#sentenceText").val()) == cleanStr(data.answers[0])) {
 				// answer is correct! make avatar happy
-				answerScore = 4;
-				
 				mouth.removeClass().addClass("mouth").addClass("smile");
 				eyebrows.removeClass().addClass("eyebrows").addClass("up");
 				
@@ -193,7 +194,7 @@ function initQuiz(data) {
 					alert('Sorry, that\'s not correct.');
 				} else if(answerScore == 1) {
 					// user has run out of attempts; tell them the answer and direct them to the next stage
-					alert('Sorry, that\'s not correct. The correct answer was: <b>' + data.answers[0]);
+					alert('Sorry, that\'s not correct. The correct answer is: ' + data.answers[0]);
 					setUpNextPanel();
 				}
 			}
@@ -293,4 +294,6 @@ function initLecture(data) {
 	$("a[data-rel=dialog]").click(function() {
 		$("#dialog").dialog();
 	});
+	
+	quizCount++;
 }
