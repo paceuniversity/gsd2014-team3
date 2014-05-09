@@ -103,7 +103,6 @@ div[data-role=header] {
 
 #sentencewritingPanel, #multiplechoicePanel, #continuePanel, #mainMenuPanel {
 	display: none;
-	background:#000;
 	color:#fff;
 	position: fixed;
 	bottom: 0;
@@ -113,7 +112,6 @@ div[data-role=header] {
 #sentencewritingPanel textarea { height: 100%; width: 100%;}
 
 #multimediaPanel {
-	background: red;
 	padding: 10px;
 }
 
