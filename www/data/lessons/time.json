@@ -14,64 +14,64 @@
     "type" : "lecture",
     "lectType" : "avatar",
     "caption" : "The word for Day is Mchana",
-    "audio" : "time/jumapili",
-    "english" : "Sunday"
+    "audio" : "time/mchana",
+    "english" : "Day"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
-    "caption" : "The word for Monday is Jumatatu",
-    "audio" : "time/jumatatu",
-    "english" : "Monday"
+    "caption" : "The word for Night is Usiku",
+    "audio" : "time/usiku",
+    "english" : "Night"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
-    "caption" : "The word for Tuesday is Jumanne",
-    "audio" : "time/jumanne",
-    "english" : "Tuesday"
+    "caption" : "If I want to say something is 'at noon', I say Saa sita mchana",
+    "audio" : "time/Saa sita mchana",
+    "english" : "At noon"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
-    "caption" : "The word for Wednesday is Jumatano",
-    "audio" : "time/jumatano",
-    "english" : "Wednesday"
+    "caption" : "For exactly 12 AM, midnight, it's Katikati ya usiku",
+    "audio" : "time/katikati ya usiku",
+    "english" : "Midnight"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
-    "caption" : "The word for Thursday is Alhamis",
-    "audio" : "time/alhamis",
-    "english" : "Thursday"
+    "caption" : "Jana was fun. Jana means Yesterday.",
+    "audio" : "time/jana",
+    "english" : "Yesterday"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
-    "caption" : "The word for Friday is Ijumaa",
-    "audio" : "time/ijumaa",
-    "english" : "Friday"
+    "caption" : "And when I want to describe last night, I say Jana usiku",
+    "audio" : "time/jana usiku",
+    "english" : "Last night"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
-    "caption" : "The word for Saturday is Jumamosi",
-    "audio" : "time/jumamosi",
-    "english" : "Saturday"
+    "caption" : "To describe today, I use the word Leo",
+    "audio" : "time/leo",
+    "english" : "Today"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
-    "caption" : "The word for Saturday is Jumamosi",
-    "audio" : "time/jumamosi",
-    "english" : "Saturday"
+    "caption" : "Let's make plans tonight, that is Leo usiku",
+    "audio" : "time/leo usiku",
+    "english" : "Tonight"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
-    "caption" : "The word for Saturday is Jumamosi",
-    "audio" : "time/jumamosi",
-    "english" : "Saturday"
+    "caption" : "Tomorrow will be a great day, that is, Kesho will be a great day.",
+    "audio" : "time/kesho",
+    "english" : "Tomorrow"
   },
   {
     "type" : "text",
@@ -79,98 +79,98 @@
   },
   {
     "type": "quiz",
-    "caption": "Do you remember what Jumapili means?",
-    "hint": "Most people go to church on this day.",
+    "caption": "Do you remember what Mchana means?",
+    "hint": "The sun is out.",
     "answers": [
-      "Sunday",
-      "Saturday",
+      "Day",
+      "Midnight",
       "Yesterday",
-      "Today"
+      "At Noon"
     ]
   },
   {
     "type": "quiz",
-    "caption": "Do you remember what Jumapili means?",
-    "hint": "Most people go to church on this day.",
+    "caption": "Do you remember what Leo Usiku means?",
+    "hint": "Later today, it'll be....",
     "answers": [
-      "Sunday",
-      "Saturday",
-      "Yesterday",
-      "Today"
+      "Tonight",
+      "Day",
+      "Next week",
+      "Night"
     ]
   },
   {
     "type": "quiz",
-    "caption": "Do you remember what Jumapili means?",
-    "hint": "Most people go to church on this day.",
+    "caption": "Do you remember what Kesho means?",
+    "hint": "We'll make plans in the future. In fact how does ________ sound?",
     "answers": [
-      "Sunday",
+      "Tomorrow",
       "Saturday",
-      "Yesterday",
-      "Today"
+      "Night",
+      "Yesterday"
     ]
   },
   {
     "type": "quiz",
-    "caption": "Do you remember what Jumamosi means?",
-    "hint": "__________ night Fever!",
+    "caption": "Do you remember what Leo means?",
+    "hint": "The day that is happening right now",
     "answers": [
-      "Saturday",
+      "Today",
       "Caturday",
       "Birthday",
-      "Tuesday"
+      "Midnight"
     ]
   },
     {
     "type": "quiz",
-    "caption": "Do you remember what Jumatano means?",
-    "hint": "Some would call this \"hump day\"",
+    "caption": "Do you remember what Katikati ya usiku means?",
+    "hint": "It's very late, you should go to bed.",
     "answers": [
-      "Wednesday",
-      "Friday",
-      "Last Week",
+      "Midnight",
+      "Last night",
+      "Next Week",
       "Good Day"
     ]
   },
     {
     "type": "quiz",
-    "caption": "Do you remember what Jumatatu means?",
-    "hint": "The beginning of the week.",
+    "caption": "Do you remember what Usiku means?",
+    "hint": "After the sun has set...",
     "answers": [
-      "Monday",
-      "Fun Day",
-      "Yesterday",
-      "Tuesday"
+      "Night",
+      "Last night",
+      "Today",
+      "At noon"
     ]
   },
     {
     "type": "quiz",
-    "caption": "Do you remember what Alhamis means?",
-    "hint": "Just one more day until...",
+    "caption": "Do you remember what Jana means?",
+    "hint": "The day before today",
     "answers": [
-      "Thursday",
+      "Yesterday",
       "All Day",
-      "Friday",
-      "Sunday"
+      "Last night",
+      "Day"
     ]
   },
     {
     "type": "quiz",
-    "caption": "Do you remember what Ijumaa means?",
-    "hint": "It's ______, ______, Gotta get down on ______!",
+    "caption": "Do you remember what Jana usiku means?",
+    "hint": "I'm tired today, because I didn't get much sleep ____ _____",
     "answers": [
-      "Friday",
+      "Last night",
       "Saturday",
-      "Yesterday",
+      "Today",
       "Caturday"
     ]
   },
     {
     "type": "quiz",
-    "caption": "Do you remember what Jumanne means?",
-    "hint": "The day before Wednesday",
+    "caption": "Do you remember what Saa sita mchana means?",
+    "hint": "Midday",
     "answers": [
-      "Tuesday",
+      "At noon",
       "Saturday",
       "Holiday",
       "Funday"
