@@ -1,7 +1,7 @@
 var videoPlayer;
 var answerScore = 0; // default is 4; decrements by 1 each time a user gets something wrong until zero
 var quizCount = 0, lessonScore = 0, panelCount = 0;
-var data;
+var data, myaudio;
 	
 // TODO: must be dynamic...
 var lesson = "sample";
@@ -25,6 +25,9 @@ $(document).on('pageshow', '#quiz', function() {
 	$("#hintTrigger").click(function() {
 		alert($("#hint").html());
 	});
+	$("#translation").click(function() {
+		alert($("#translationText").html());
+	});
 });
 	
 function setUpNextPanel() {
@@ -45,11 +48,11 @@ function setUpNextPanel() {
 		// lesson still going, redirect to next panel
 		if(data[panelCount].type == "lecture") {
 			answerScore = 0;
-			initLecture(data[panelCount]);
+			renderLecture(data[panelCount]);
 		} else if(data[panelCount].type == "quiz") {
 			lessonScore += answerScore;
 			answerScore = 4;
-			initQuiz(data[panelCount]);
+			renderQuiz(data[panelCount]);
 		}
 		panelCount++;
 	}
@@ -95,7 +98,7 @@ function cleanStr(str) {
 	return str.replace(/[^A-Za-z0-9 ]/g, '').toLowerCase();
 }
 
-function initQuiz(data) {
+function renderQuiz(data) {
 	// hide translation and continue buttons
 	$("#translation").fadeOut();
 	$("#continue").fadeOut();
@@ -117,7 +120,9 @@ function initQuiz(data) {
 	// when the avatar is clicked, replay the sound file
 	avatar.click(function() {
 		// reload the sound
-		var myaudio = new Media("data/audio/" + data.audio + ".mp3");
+		if(myaudio)
+			myaudio.stop();
+		myaudio = new Media("data/audio/" + data.audio + ".mp3");
 		myaudio.play();
 	});
 	
@@ -216,7 +221,7 @@ function shuffle(o){ // courtesy: Google
     return o;
 }
 
-function initLecture(data) {
+function renderLecture(data) {
 	// TBD: get json data from json
 	var correctAnswer = "d";
 	var isMultipleChoiceMode = true;
@@ -279,7 +284,7 @@ function initLecture(data) {
 	$("#sentencewritingPanel").fadeOut();
 	
 	// show translation and continue buttons
-	$("#translation").fadeIn();
+	$("#translation").fadeIn();translationText
 	$("#continuePanel").fadeIn();
 	
 	// append next click event to continue button
@@ -292,6 +297,8 @@ function initLecture(data) {
 	$("a[data-rel=dialog]").click(function() {
 		$("#dialog").dialog();
 	});
+	
+	$("#translationText").html("English: " + data.english);
 	
 	quizCount++;
 }

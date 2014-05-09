@@ -81,10 +81,10 @@ $(document).on('pageshow', '#dictionary', function() {
 
     for(k=0; k<dicentries.length; k++) {
       if(!isEnglish) {
-        if(dicentries[k].kiswahili.toString().substring(0, searchQuery.length) == searchQuery)
+        if(dicentries[k].kiswahili.toString().substring(0, searchQuery.length).toLowerCase() == searchQuery.toLowerCase())
           searchResults.push(dicentries[k]);
       } else {
-        if(dicentries[k].english.toString().substring(0, searchQuery.length) == searchQuery)
+        if(dicentries[k].english.toString().substring(0, searchQuery.length).toLowerCase() == searchQuery.toLowerCase())
           searchResults.push(dicentries[k]);
       }
     }
