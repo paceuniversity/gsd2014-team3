@@ -1,17 +1,17 @@
 var videoPlayer;
 var answerScore = 4; // default is 4; decrements by 1 each time a user gets something wrong until zero
-var data, k;
+var quizCount = 0, lessonScore = 0, panelCount = 0;
+var data;
+	
+// TODO: must be dynamic...
+var lesson = "sample";
 
 $(document).on('pageshow', '#quiz', function() {
-	k = 0; // current panel count (panel is a quiz or a lecture)
 	// set height of multimedia panel to fit screen
 	var multimediaHeight = screen.height
 		- $("div[data-role=header]").height()
 		- $("#multiplechoicePanel").height();
 	$("#multimediaPanel").height(multimediaHeight);
-	
-	// TODO: must be dynamic...
-	var lesson = "sample";
 	
 	// load the conversation quiz data
 	$.get("data/lessons/" + lesson + ".json", function(dat) {
@@ -21,23 +21,67 @@ $(document).on('pageshow', '#quiz', function() {
 });
 	
 function setUpNextPanel() {
-	// stop audio if playing
+	// reset quiz functions
 	stopAudio();
 	
-	if(k >= data.length) {
-		console.log("end");
+	// retrieve previous lesson data
+	var lessonData = window.localStorage.getItem(lesson + "_data");
+	if(lessonData.lessonScore != undefined
+		&& lessonData.quizCount != undefined
+		&& lessonData.panelCount != undefined) {
+		lessonScore = lessonData.lessonScore;
+		quizCount = lessonData.quizCount;
+		panelCount = lessonData.panelCount;
+	}
+		
+	window.localStorage.setItem(lesson + "_data", {
+		lessonScore: parseInt(lessonScore+answerScore),
+		quizCount: quizCount,
+		panelCount: panelCount
+	});
+	
+	if(panelCount >= data.length) {
 		// lesson complete, redirect to progress report
-		$(":mobile-pagecontainer").pagecontainer("change", "progress.html", { showLoadMsg: true });
+		renderProgressReport();
 	} else {
 		// lesson still going, redirect to next panel
-		if(data[k].type == "lecture")
-			initLecture(data[k]);
-		else if(data[k].type == "quiz")
-			initQuiz(data[k]);
-		console.log(k + " <-- k");
-		k++;
-		
+		console.log(panelCount + " <-- k");
+		if(data[panelCount].type == "lecture") {
+			initLecture(data[panelCount]);
+			answerScore = 0;
+		} else if(data[panelCount].type == "quiz") {
+			initQuiz(data[panelCount]);
+			answerScore = 4;
+			quizCount++;
+		}
+		panelCount++;
 	}
+}
+
+function renderProgressReport() {
+	$(".lesson-panel").hide();
+	
+	// calculate final score for this lesson
+	var lessonData = window.localStorage.getItem(lesson + "_data");
+	if(lessonData.lessonScore != undefined
+		&& lessonData.quizCount != undefined
+		&& lessonData.panelCount != undefined) {
+		var finalScore = (lessonData.lessonScore/lessonData.quizCount);
+	} else
+		var finalScore = 4;
+	console.log(finalScore);
+
+	var report = $(".avg-score-star");
+	if(finalScore >= 4)
+		report.addClass("avg-score-star-good");
+	else if(finalScore < 4 && finalScore > 2)
+		report.addClass("avg-score-star-medium");
+	else
+		report.addClass("avg-score-star-bad");
+
+	// show score report to user
+	$(".avg-score-star div").html("<br><br>" + finalScore);
+	report.show();
 }
 
 function cleanStr(str) {
@@ -45,6 +89,8 @@ function cleanStr(str) {
 }
 
 function initQuiz(data) {
+	quizCount++;
+	
 	// hide translation and continue buttons
 	$("#translation").fadeOut();
 	$("#continue").fadeOut();
@@ -63,12 +109,10 @@ function initQuiz(data) {
 	$("#multimediaPanel .media-container").html(avatar).append(info);
 	avatar.html(eyebrows).append(mouth);
 	
-	// load the sound
-	//var myaudio = new Media("data/audio/" + data.audio + ".mp3");
-	
 	// when the avatar is clicked, replay the sound file
 	avatar.click(function() {
 		// reload the sound
+		//var myaudio = new Media("data/audio/" + data.audio + ".mp3");
 		//myaudio.play();
 	});
 	
@@ -90,10 +134,12 @@ function initQuiz(data) {
 			$("#ans" + i).attr("href", (answers[i] == correct ? "#popupCorrect" : "#popupIncorrect")).html(answers[i]);
 		
 		// functions for multiple choice
-		$(".multiple-choice").click(function() { return false; });
+		$(".multiple-choice").off();
 		$(".multiple-choice").click(function() {
+			$(this).off();
 			if($(this).attr("href") == "#popupCorrect") {
 				// popup was correct!
+				alert('Correct!');
 				answerScore = 4;
 				
 				mouth.removeClass().addClass("mouth").addClass("smile");
@@ -102,6 +148,7 @@ function initQuiz(data) {
 				setUpNextPanel();
 			} else {
 				// the answer was incorrect; decrement score and make avatar angrier
+				alert('Sorry, that\'s not correct.');
 				answerScore--;
 				
 				// change eyebrows and/or mouth to make avatar look upset
@@ -119,6 +166,7 @@ function initQuiz(data) {
 	} else {
 		// set up the sentence writing panel
 		$("#sentenceSubmit").click(function() {
+			$(this).off();
 			if(cleanStr($("#sentenceText").val()) == cleanStr(data.answers[0])) {
 				// answer is correct! make avatar happy
 				answerScore = 4;
@@ -126,7 +174,8 @@ function initQuiz(data) {
 				mouth.removeClass().addClass("mouth").addClass("smile");
 				eyebrows.removeClass().addClass("eyebrows").addClass("up");
 				
-				$("#popupCorrect").popup('open', {transition: "pop", role: "dialog"});
+				alert('Correct!');
+				setUpNextPanel();
 			} else {
 				// the answer was incorrect; decrement score and make avatar angrier
 				answerScore--;
@@ -136,19 +185,15 @@ function initQuiz(data) {
 					mouth.removeClass().addClass("mouth").addClass("frown");
 					
 					// show incorrect popup and number of attempts remaining (2)
-					$("#popupIncorrectDetail p").html("Sorry, that's not correct. You have <b>" + answerScore + "</b> tries left.");
-					$("#popupIncorrectDetail").popup('open', {transition: "pop", role: "dialog"});
+					alert('Sorry, that\'s not correct.');
 				} else if(answerScore == 2) {
 					eyebrows.removeClass().addClass("eyebrows").addClass("down");
 					
 					// show incorrect popup and number of attempts remaining (2)
-					$("#popupIncorrectDetail p").html("Sorry, that's not correct. You have <b>" + answerScore + "</b> tries left.");
-					$("#popupIncorrectDetail").popup('open', {transition: "pop", role: "dialog"});
+					alert('Sorry, that\'s not correct.');
 				} else if(answerScore == 1) {
 					// user has run out of attempts; tell them the answer and direct them to the next stage
-					$("#popupIncorrectDetail p").html("Sorry, that's not correct. The correct answer was: <b>" + data.answers[0] + "</b>.");
-					$("#popupIncorrectDetail").popup('open', {transition: "pop", role: "dialog"});
-					
+					alert('Sorry, that\'s not correct. The correct answer was: <b>' + data.answers[0]);
 					setUpNextPanel();
 				}
 			}
@@ -240,6 +285,7 @@ function initLecture(data) {
 	
 	// append next click event to continue button
 	$("#continue").click(function() {
+		$(this).off();
 		setUpNextPanel();
 	});
 

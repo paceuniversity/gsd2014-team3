@@ -58,7 +58,7 @@ $(document).on('pageshow', '#dictionary', function() {
       var li=$("<li></li>");
       li.append(h3).append(pstrong).append(audiv);
       var p = $("<span></span>");
-      if (typeof(entries[i].notes))
+      if (entries[i].notes)
         p.html(entries[i].notes);
       else
         p.html("No additional notes");
