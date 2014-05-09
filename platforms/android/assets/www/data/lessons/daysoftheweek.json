@@ -2,7 +2,7 @@
   {
     "type" : "lecture",
     "lectType" : "avatar",
-    "caption" : "Habari, how is everything?",
+    "caption" : "Habari, how is everything? Today, we'll be talking about the days of the week.",
     "audio" : "greetings/habari",
     "english" : "hello"
   },
@@ -56,12 +56,8 @@
     "english" : "Saturday"
   },
   {
-    "type" : "text",
-    "caption" : "Now, let's review."
-  },
-  {
     "type": "quiz",
-    "caption": "Do you remember what Jumapili means?",
+    "caption": "Now, let's review. Do you remember what Jumapili means?",
     "hint": "Most people go to church on this day.",
     "answers": [
       "Sunday",

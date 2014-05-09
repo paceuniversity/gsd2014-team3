@@ -2,13 +2,9 @@
   {
     "type" : "lecture",
     "lectType" : "avatar",
-    "caption" : "Habari, how is everything?",
+    "caption" : "Habari, how is everything? Today, we'll be talking about ways to describe time.",
     "audio" : "greetings/habari",
     "english" : "hello"
-  },
-  {
-    "type" : "text",
-    "caption" : "Today, we'll be talking about ways to describe time."
   },
   {
     "type" : "lecture",
@@ -74,12 +70,8 @@
     "english" : "Tomorrow"
   },
   {
-    "type" : "text",
-    "caption" : "Now, let's review."
-  },
-  {
     "type": "quiz",
-    "caption": "Do you remember what Mchana means?",
+    "caption": "Now, let's review. Do you remember what Mchana means?",
     "hint": "The sun is out.",
     "answers": [
       "Day",
