@@ -1,7 +1,7 @@
 var videoPlayer;
 var answerScore = 0; // default is 4; decrements by 1 each time a user gets something wrong until zero
 var quizCount = 0, lessonScore = 0, panelCount = 0;
-var data;
+var data, myaudio;
 	
 // TODO: must be dynamic...
 var lesson = "sample";
@@ -120,7 +120,9 @@ function renderQuiz(data) {
 	// when the avatar is clicked, replay the sound file
 	avatar.click(function() {
 		// reload the sound
-		var myaudio = new Media("data/audio/" + data.audio + ".mp3");
+		if(myaudio)
+			myaudio.stop();
+		myaudio = new Media("data/audio/" + data.audio + ".mp3");
 		myaudio.play();
 	});
 	
