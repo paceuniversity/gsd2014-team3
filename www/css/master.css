@@ -43,7 +43,7 @@ div.ui-block-a, div.ui-block-b {
   background-repeat:no-repeat;
   background-size: contain;
   background-position: center center;
-  height: 5em;
+  height: 6em;
 }
 #abutton {
   background-image:url(../img/about.png);
