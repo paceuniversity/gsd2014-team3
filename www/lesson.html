@@ -20,9 +20,15 @@
 			<a href="#calendar" data-icon="calendar" data-iconpos="notext" class="ui-btn-right jqm-home">Menu</a>
 		</div>
 		
-		<div class="avg-score-star">
-			<div></div>
+		<!-- Begin panel for progress report -->
+		<div id="progressReport" style="display:none">
+			<h2>Your score:</h2>
+			<div class="avg-score-star">
+				<div></div>
+			</div>
+			<h2 id="progressMsg"></h2>
 		</div>
+		<!-- End panel for progress report -->
 
 		<div id="multimediaPanel" class="lesson-panel">
 			<div class="media-container"></div>
@@ -53,6 +59,16 @@
 		</div>
 		<!-- End continue button -->
 
+		<!-- Begin main menu button -->
+		<div id="mainMenuPanel">
+			<div class="ui-grid-solo">
+				<div class="ui-block-a">
+					<a href="#" data-role="button" data-mini="true" id="mainmenu">Main Menu</a>
+				</div>
+			</div>
+		</div>
+		<!-- End main menu button -->
+
 		<!-- Begin panel for multiple choice -->
 		<div id="multiplechoicePanel" class="lesson-panel">
 			<div class="ui-grid-b my-breakpoint">
@@ -61,7 +77,7 @@
 					<a href="#popupIncorrect" id="ans1" data-rel="popup" data-transition="pop" data-role="button" data-mini="true" data-position-to="window" class="multiple-choice">Answer B</a>
 				</div>
 				<div class="ui-block-b">
-					<a href="#popupDialog" data-rel="popup" data-inline="true" data-transition="pop" data-position-to="window" class="hint-icon" id="hintTrigger"></a>
+					<a href="#" class="hint-icon" id="hintTrigger"></a>
 				</div>
 				<div class="ui-block-c">
 					<a href="#popupCorrect" id="ans2" data-rel="popup" data-transition="pop" data-role="button" data-mini="true" data-position-to="window" class="multiple-choice">Answer C</a>
@@ -72,30 +88,7 @@
 		<!-- End panel for multiple choice -->
 	</div>
 
-	<!-- Popup for displaying whether answer was correct or incorrect WITH detail -->
-	<div data-role="popup" id="popupIncorrectDetail" data-theme="a">
-		<p></p>
-	</div>
-
-	<!-- Popup for displaying whether answer was correct or incorrect -->
-	<div data-role="popup" id="popupIncorrect" data-theme="a">
-		<p>Sorry, that's not correct. You have <b id="attempts">3</b> attempts remaining.</p>
-	</div>
-
-	<!-- Popup for displaying whether answer was correct or incorrect -->
-	<div data-role="popup" id="popupCorrect" data-theme="a">
-		<p>Correct!</p>
-	</div>
-	
-	<!-- Begin hint dialog -->
-	<div data-role="popup" id="popupDialog" data-theme="a" style="background-color: green">
-		<div data-role="content" data-theme="d" style="padding:15px;" class="ui-corner-bottom">
-			<h3>Hint</h3>
-			<p></p>
-			<a href="#" data-role="button" data-rel="back" data-theme="b">Ok, got it!</a>
-		</div>
-	</div>
-	<!-- End hint dialog -->
+	<div id="hint"></div>
 
 </div>
 
