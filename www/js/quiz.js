@@ -26,14 +26,16 @@ function setUpNextPanel() {
 	
 	// retrieve previous lesson data
 	var lessonData = window.localStorage.getItem(lesson + "_data");
-	if(lessonData.lessonScore != undefined
-		&& lessonData.quizCount != undefined
-		&& lessonData.panelCount != undefined) {
-		lessonScore = lessonData.lessonScore;
-		quizCount = lessonData.quizCount;
-		panelCount = lessonData.panelCount;
+	if(lessonData != undefined) {
+		if(lessonData.lessonScore != undefined
+			&& lessonData.quizCount != undefined
+			&& lessonData.panelCount != undefined) {
+			lessonScore = lessonData.lessonScore;
+			quizCount = lessonData.quizCount;
+			panelCount = lessonData.panelCount;
+		}
 	}
-		
+	
 	window.localStorage.setItem(lesson + "_data", {
 		lessonScore: parseInt(lessonScore+answerScore),
 		quizCount: quizCount,
