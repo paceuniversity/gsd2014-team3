@@ -9,6 +9,9 @@
   {"Category": "Greetings", "Score": 12}
   ],
   "unlockedDictionaries": [
-  {"Category": "Greetings", "File": "greetings.json"}
+    {"Category": "Greetings", "File": "greetings.json"},
+    {"Category": "Days of the Week", "File": "daysoftheweek.json"},
+    {"Category": "Family", "File": "family.json"},
+    {"Category": "Time", "File": "time.json"}
   ]
 }
