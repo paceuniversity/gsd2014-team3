@@ -66,7 +66,7 @@
   {
     "type": "quiz",
     "caption": "Do you remember what Jumapili means?",
-    "hint": "test hint",
+    "hint": "Most people go to church on this day.",
     "answers": [
       "Sunday",
       "Saturday",
@@ -77,7 +77,7 @@
   {
     "type": "quiz",
     "caption": "Do you remember what Jumamosi means?",
-    "hint": "test hint",
+    "hint": "__________ night Fever!",
     "answers": [
       "Saturday",
       "Caturday",
@@ -88,7 +88,7 @@
     {
     "type": "quiz",
     "caption": "Do you remember what Jumatano means?",
-    "hint": "test hint",
+    "hint": "Some would call this \"hump day\"",
     "answers": [
       "Wednesday",
       "Friday",
@@ -99,7 +99,7 @@
     {
     "type": "quiz",
     "caption": "Do you remember what Jumatatu means?",
-    "hint": "test hint",
+    "hint": "The beginning of the week.",
     "answers": [
       "Monday",
       "Fun Day",
@@ -110,7 +110,7 @@
     {
     "type": "quiz",
     "caption": "Do you remember what Alhamis means?",
-    "hint": "test hint",
+    "hint": "Just one more day until...",
     "answers": [
       "Thursday",
       "All Day",
@@ -121,7 +121,7 @@
     {
     "type": "quiz",
     "caption": "Do you remember what Ijumaa means?",
-    "hint": "test hint",
+    "hint": "It's ______, ______, Gotta get down on ______!",
     "answers": [
       "Friday",
       "Saturday",
@@ -132,7 +132,7 @@
     {
     "type": "quiz",
     "caption": "Do you remember what Jumanne means?",
-    "hint": "test hint",
+    "hint": "The day before Wednesday",
     "answers": [
       "Tuesday",
       "Saturday",
