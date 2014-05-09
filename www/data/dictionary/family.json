@@ -4,7 +4,7 @@
     {"english" : "mother", "kiswahili" : "mama", "audio" : "mama.mp3", "notes" : "Biological Mother (Real mother)" },
     {"english" : "father", "kiswahili" : "baba", "audio" : "baba.mp3", "notes" : "Biological Father (Real mother)" },
     {"english" : "child", "kiswahili" : "mtoto", "audio" : "mtoto.mp3" },
-    {"english" : "childrens", "kiswahili" : "watoto", "audio" : "watoto.mp3" },
+    {"english" : "children", "kiswahili" : "watoto", "audio" : "watoto.mp3" },
     {"english" : "brother", "kiswahili" : "kaka", "audio" : "kaka.mp3" },
     {"english" : "sister", "kiswahili" : "dada", "audio" : "dada.mp3" },
     {"english" : "uncle", "kiswahili" : "mjomba", "audio" : "mjomba.mp3", "notes" : "your mother's brother (You can use this word to identify them all)" },
