@@ -3,9 +3,9 @@ var mediaTimer = null;
 
 // Play audio
 //
-function playAudio(src, callback) {
+function playAudio(src) {
 	// Create Media object from src
-	my_media = new Media(getPhoneGapPath() + src, onSuccess, onError);
+	my_media = new Media(getPhoneGapPath() + src);
 	var lastPos = 0;
 	
 	// Play audio
@@ -48,6 +48,7 @@ function pauseAudio() {
 	if (my_media) {
 		my_media.pause();
 	}
+				console.log("4");
 }
 
 // Stop audio
@@ -56,6 +57,7 @@ function stopAudio() {
 	if (my_media) {
 		my_media.stop();
 	}
+				console.log("5");
 	clearInterval(mediaTimer);
 	mediaTimer = null;
 }
@@ -77,16 +79,12 @@ function onError(error) {
 //
 function setAudioPosition(callback) {
 	callback();
-	//document.getElementById('audio_position').innerHTML = position;
 }
 
 function getPhoneGapPath() {
-	var is_chrome = /chrome/i.test( navigator.userAgent );
-    var path = window.location.pathname;
-    path = path.substr( path, path.length - 10 );
-	
-	//if(is_chrome)
-		return "";
-	//else
-	//	return 'file://' + path;
+     var path = window.location.pathname;
+     path = path.substr( path, path.lastIndexOf("/")+1 );
+
+	//	return ""; // if chrome
+	return 'file://' + path; // if phonegap
 }

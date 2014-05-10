@@ -231,7 +231,6 @@ function renderQuiz(data) {
 }
 
 function renderLecture(data) {
-	alert("English: " + data.english);
 	// TBD: get json data from json
 	var correctAnswer = "d";
 	var isMultipleChoiceMode = true;
@@ -240,7 +239,6 @@ function renderLecture(data) {
 	var videoExt = videoFile.split(".");
 	var videoSize = "1280x720";
 
-			alert('after render');
 	if(mediaType == "video") { // TBD: add support for play/replay and touch-to-play/pause features
 		// a video will play for the user
 		videoPlayer = $("<video></video>");
