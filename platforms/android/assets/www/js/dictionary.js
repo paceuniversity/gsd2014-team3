@@ -19,6 +19,7 @@ $(document).on('pageshow', '#dictionary', function() {
     });
     isEnglish = true;
     makelist(dicentries);
+    $("#dictionarySearch").attr("placeholder", "Search by English...");
   });
   $("#kiswahili").click(function(){
     dicentries.sort(function (a, b) {
@@ -31,6 +32,7 @@ $(document).on('pageshow', '#dictionary', function() {
     });
     isEnglish = false;
     makelist(dicentries);
+    $("#dictionarySearch").attr("placeholder", "Search by Kiswahili...");
   });
   $("#homelink").click(function(){
     dicentries=[];
