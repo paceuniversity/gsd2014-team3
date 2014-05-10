@@ -1,7 +1,7 @@
 var videoPlayer;
 var answerScore = 0; // default is 4; decrements by 1 each time a user gets something wrong until zero
 var quizCount = 0, lessonScore = 0, panelCount = 0;
-var panelData, myaudio;
+var data, myaudio;
 	
 // TODO: must be dynamic...
 var lesson = "sample";
@@ -38,8 +38,8 @@ function renderLesson() {
 	$("#multimediaPanel").height(multimediaHeight);
 	
 	// load the conversation quiz data
-	$.getJSON("data/lessons/" + lesson + ".json", function(dat) {
-		panelData = dat;
+	$.get("data/lessons/" + lesson + ".json", function(dat) {
+		data = dat;
 		renderNextPanel();
 	});
 	
@@ -54,6 +54,9 @@ function renderLesson() {
 }
 	
 function renderNextPanel() {
+	// reset quiz functions
+	stopAudio();
+	
 	var newDat = {
 		lessonScore: lessonScore,
 		quizCount: quizCount,
@@ -61,18 +64,18 @@ function renderNextPanel() {
 	};
 	window.localStorage.setItem(lesson + "_data", JSON.stringify(newDat));
 	
-	if(panelCount >= panelData.length) {
+	if(panelCount >= data.length) {
 		// lesson complete, redirect to progress report
 		renderProgressReport();
 	} else {
 		// lesson still going, redirect to next panel
-		if(panelData[panelCount].type == "lecture") {
+		if(data[panelCount].type == "lecture") {
 			answerScore = 0;
-			renderLecture(panelData[panelCount]);
-		} else if(panelData[panelCount].type == "quiz") {
+			renderLecture(data[panelCount]);
+		} else if(data[panelCount].type == "quiz") {
 			lessonScore += answerScore;
 			answerScore = 4;
-			renderQuiz(panelData[panelCount]);
+			renderQuiz(data[panelCount]);
 		}
 		panelCount++;
 	}
@@ -231,7 +234,6 @@ function renderQuiz(data) {
 }
 
 function renderLecture(data) {
-	alert("English: " + data.english);
 	// TBD: get json data from json
 	var correctAnswer = "d";
 	var isMultipleChoiceMode = true;
@@ -240,7 +242,6 @@ function renderLecture(data) {
 	var videoExt = videoFile.split(".");
 	var videoSize = "1280x720";
 
-			alert('after render');
 	if(mediaType == "video") { // TBD: add support for play/replay and touch-to-play/pause features
 		// a video will play for the user
 		videoPlayer = $("<video></video>");
@@ -310,6 +311,7 @@ function renderLecture(data) {
 	});
 	
 	$("#translationText").html("English: " + data.english);
+	
 	quizCount++;
 }
 

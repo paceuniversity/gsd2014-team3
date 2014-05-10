@@ -1,2 +1,2 @@
-C:\xampp\htdocs\jifunze-kiswahili\platforms\android\ant-build\AndroidManifest.xml : \
-C:\xampp\htdocs\jifunze-kiswahili\platforms\android\AndroidManifest.xml \
+C:\wamp\www\jifunze\platforms\android\ant-build\AndroidManifest.xml : \
+C:\wamp\www\jifunze\platforms\android\AndroidManifest.xml \
