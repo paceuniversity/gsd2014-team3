@@ -8,9 +8,29 @@ var lesson = "sample";
 var lessonName = "Sample Quiz2";
 
 $(document).on('pageshow', '#quiz', function() {
-	// remove new storage
-	window.localStorage.removeItem(lesson + "_data", undefined);
+	renderLesson();
 	
+	$("#restart").click(function() {
+		if(confirm('Are you sure you want to restart this lesson?')) {
+			lessonScore = 0;
+			quizCount = 0;
+			panelCount = 0;
+			var newDat = {
+				lessonScore: 0,
+				quizCount: 0,
+				panelCount: 0
+			};
+			window.localStorage.setItem(lesson + "_data", JSON.stringify(newDat));
+			$("body").pagecontainer("change", window.location.href, {
+				allowSamePageTransition: true,
+				transition: 'none',
+				reloadPage: true
+			});
+		}
+	});
+});
+
+function renderLesson() {
 	// set height of multimedia panel to fit screen
 	var multimediaHeight = screen.height
 		- $("div[data-role=header]").height()
@@ -20,7 +40,7 @@ $(document).on('pageshow', '#quiz', function() {
 	// load the conversation quiz data
 	$.get("data/lessons/" + lesson + ".json", function(dat) {
 		data = dat;
-		setUpNextPanel();
+		renderNextPanel();
 	});
 	
 	$("#lessonName").html(lessonName);
@@ -31,9 +51,9 @@ $(document).on('pageshow', '#quiz', function() {
 	$("#translation").click(function() {
 		alert($("#translationText").html());
 	});
-});
+}
 	
-function setUpNextPanel() {
+function renderNextPanel() {
 	// reset quiz functions
 	stopAudio();
 	
@@ -97,10 +117,6 @@ function renderProgressReport() {
 	$("#mainMenuPanel").show();
 }
 
-function cleanStr(str) {
-	return str.replace(/[^A-Za-z0-9 ]/g, '').toLowerCase();
-}
-
 function renderQuiz(data) {
 	// hide translation and continue buttons
 	$("#translation").fadeOut();
@@ -153,7 +169,7 @@ function renderQuiz(data) {
 				mouth.removeClass().addClass("mouth").addClass("smile");
 				eyebrows.removeClass().addClass("eyebrows").addClass("up");
 				
-				setUpNextPanel();
+				renderNextPanel();
 			} else {
 				// the answer was incorrect; decrement score and make avatar angrier
 				alert('Sorry, that\'s not correct.');
@@ -165,7 +181,7 @@ function renderQuiz(data) {
 				else if(answerScore == 2)
 					eyebrows.removeClass().addClass("eyebrows").addClass("down");
 				else if(answerScore == 1)
-					setUpNextPanel();
+					renderNextPanel();
 			}
 		});
 	
@@ -180,7 +196,7 @@ function renderQuiz(data) {
 				eyebrows.removeClass().addClass("eyebrows").addClass("up");
 				
 				alert('Correct!');
-				setUpNextPanel();
+				renderNextPanel();
 			} else {
 				// the answer was incorrect; decrement score and make avatar angrier
 				answerScore--;
@@ -199,7 +215,7 @@ function renderQuiz(data) {
 				} else if(answerScore == 1) {
 					// user has run out of attempts; tell them the answer and direct them to the next stage
 					alert('Sorry, that\'s not correct. The correct answer is: ' + data.answers[0]);
-					setUpNextPanel();
+					renderNextPanel();
 				}
 			}
 		});
@@ -215,11 +231,6 @@ function renderQuiz(data) {
 	$("a[data-rel=dialog]").click(function() {
 		$("#dialog").dialog();
 	});
-}
-
-function shuffle(o){ // courtesy: Google
-    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-    return o;
 }
 
 function renderLecture(data) {
@@ -291,7 +302,7 @@ function renderLecture(data) {
 	// append next click event to continue button
 	$("#continue").click(function() {
 		$(this).off();
-		setUpNextPanel();
+		renderNextPanel();
 	});
 
 	// set up dialog
@@ -302,4 +313,13 @@ function renderLecture(data) {
 	$("#translationText").html("English: " + data.english);
 	
 	quizCount++;
+}
+
+function cleanStr(str) {
+	return str.replace(/[^A-Za-z0-9 ]/g, '').toLowerCase();
+}
+
+function shuffle(o){ // courtesy: Google
+    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
 }
