@@ -1,8 +1,0 @@
-{
-  "conversation": [
-    {"text": "Hello! *!", "vocab": ["greetings", 0], "answers":[0,0,0,1]},
-    {"text": "It's nice to meet you."}
-    //document with "text" field alone has no vocab in it.
-    //document with "text" field and a "vocab" field containing array with the name of the JSON document and the index of the vocabulary document to pull.
-  ]
-}
