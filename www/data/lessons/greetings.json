@@ -2,71 +2,71 @@
   {
     "type" : "lecture",
     "lectType" : "avatar",
-    "caption" : "Habari, how is everything?",
+    "caption" : "Habari, how is everything? Habari is a word for hello between peers. Kids rarely use it, and it can be used any time of day.",
     "audio" : "greetings/habari",
     "english" : "hello"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
-    "caption" : "The word for Day is Mchana",
-    "audio" : "time/mchana",
-    "english" : "Day"
+    "caption" : "Young children and teenagers say Mambo for \"What's up?\" It is disrespectful to say this to elders.",
+    "audio" : "greetings/mambo",
+    "english" : "What's up? (Casual)"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
-    "caption" : "The word for Night is Usiku",
-    "audio" : "time/usiku",
-    "english" : "Night"
+    "caption" : "Hujambo means \"Are you fine?\" and is used by elders to children, and when women speak. It is not forbidden for a man to be asked Hujambo, but most men prefer to not be asked this.",
+    "audio" : "greetings/hujambo",
+    "english" : "Are you fine?"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
     "caption" : "If I want to say something is 'at noon', I say Saa sita mchana",
-    "audio" : "time/Saa sita mchana",
+    "audio" : "greetings/Saa sita mchana",
     "english" : "At noon"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
     "caption" : "For exactly 12 AM, midnight, it's Katikati ya usiku",
-    "audio" : "time/katikati ya usiku",
+    "audio" : "greetings/katikati ya usiku",
     "english" : "Midnight"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
     "caption" : "Jana was fun. Jana means Yesterday.",
-    "audio" : "time/jana",
+    "audio" : "greetings/jana",
     "english" : "Yesterday"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
     "caption" : "And when I want to describe last night, I say Jana usiku",
-    "audio" : "time/jana usiku",
+    "audio" : "greetings/jana usiku",
     "english" : "Last night"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
     "caption" : "To describe today, I use the word Leo",
-    "audio" : "time/leo",
+    "audio" : "greetings/leo",
     "english" : "Today"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
     "caption" : "Let's make plans tonight, that is Leo usiku",
-    "audio" : "time/leo usiku",
+    "audio" : "greetings/leo usiku",
     "english" : "Tonight"
   },
   {
     "type" : "lecture",
     "lectType" : "avatar",
     "caption" : "Tomorrow will be a great day, that is, Kesho will be a great day.",
-    "audio" : "time/kesho",
+    "audio" : "greetings/kesho",
     "english" : "Tomorrow"
   },
   {
