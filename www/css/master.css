@@ -276,6 +276,7 @@ margin: 0.5em 1em;
  }
 
 div#notes-popup {
+  position:fixed;
   top:15em!important;
   left:1em!important;
   right:1em!important;
