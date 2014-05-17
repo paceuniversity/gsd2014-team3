@@ -1,0 +1,16 @@
+[
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "Habari, how is everything? Habari is a word for hello between peers. Kids rarely use it, and it can be used any time of day.",
+    "audio" : "greetings/habari",
+    "english" : "hello"
+  },
+  {
+    "type" : "lecture",
+    "lectType" : "avatar",
+    "caption" : "Sorry, this is the end of the demo.",
+    "audio" : "greetings/mambo",
+    "english" : "What's up? (Casual)"
+  }
+]
