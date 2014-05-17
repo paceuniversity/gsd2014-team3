@@ -1,6 +1,5 @@
 $(document).on('pageshow', '#conversation-chooser', function() {
     var data = appData;
-    alert(data);
     var completed=[];
     for (i=0; i<data.available.length; i++) {
       var classname="ui-li-static ui-body-inherit";

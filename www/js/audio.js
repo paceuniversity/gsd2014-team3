@@ -42,6 +42,31 @@ function playAudio(src) {
 	}
 }
 
+function playDictionaryAudio(src) {
+	// Create Media object from src
+	my_media = new Media(getPhoneGapPath() + src);
+	var lastPos = 0;
+	
+	// Play audio
+	my_media.play();
+
+	// Update my_media position every second
+	if (mediaTimer == null) {
+		mediaTimer = setInterval(function() {
+			// get my_media position
+			my_media.getCurrentPosition(
+				// success callback
+				function(position) {
+				},
+				// error callback
+				function(e) {
+					console.log("Error getting pos=" + e);
+				}
+			);
+		}, 100);
+	}
+}
+
 // Pause audio
 //
 function pauseAudio() {

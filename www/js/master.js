@@ -27,24 +27,18 @@ $(document).on('pageshow', '#index', function() {
   } else {
     appData = $.parseJSON(appDataJSON);
   }
-  alert("testing exit button binding");
+  
   /*bind exit function*/
   function exitAppPopup() {
-    navigator.notification.confirm(
-          'Exit Jifunze Kiswahili?'
-        , function(button) {
-              if (button == 2) {
-                  navigator.app.exitApp();
-              }
-          }
-        , 'Exit'
-        , 'Keep Learning'
-    );
-    return false;
+	if(confirm("Are you sure you want to exit Jifunze Kiswahili?"))
+        navigator.app.exitApp();
+	else
+		return false;
   }
-  alert("exitapppopup function exists");
-  $("#ebutton").on('click', exitAppPopup());
-  alert("after .on");
+  
+  $("#ebutton").click(function() {
+	exitAppPopup();
+  });
 });
 
 $(document).bind('mobileinit', function() {

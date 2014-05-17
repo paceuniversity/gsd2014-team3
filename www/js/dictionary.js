@@ -58,8 +58,7 @@ $(document).on('pageshow', '#dictionary', function() {
       audiv.attr("data-filename", "data/audio/greetings/"+entries[i].audio);
 	    audiv.click(function() {
 		    console.log($(this).attr("data-filename"));
-		    var hintAudio = new Media($(this).attr("data-filename"));
-		    hintAudio.play();
+		    var hintAudio = new playDictionaryAudio($(this).attr("data-filename"));
 	    });
       var li=$("<li></li>");
       var wrapper=$("<div></div>");
