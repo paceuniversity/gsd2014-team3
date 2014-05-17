@@ -27,7 +27,7 @@ $(document).on('pageshow', '#index', function() {
   } else {
     appData = $.parseJSON(appDataJSON);
   }
-
+  alert("testing exit button binding");
   /*bind exit function*/
   function exitAppPopup() {
     navigator.notification.confirm(
@@ -42,7 +42,9 @@ $(document).on('pageshow', '#index', function() {
     );
     return false;
   }
+  alert("exitapppopup function exists");
   $("#ebutton").on('click', exitAppPopup());
+  alert("after .on");
 });
 
 $(document).bind('mobileinit', function() {
