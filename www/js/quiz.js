@@ -4,8 +4,6 @@ var quizCount = 0, lessonScore = 0, panelCount = 0;
 var panelData, myaudio, categoryName;
 
 // TODO: must be dynamic...
-var lesson = "sample";
-var lessonName = "Sample Quiz2";
 
 $(document).on('pageshow', '#quiz', function() {
 	renderLesson();
@@ -40,11 +38,10 @@ function renderLesson() {
 	// load the conversation quiz data
 	$.getJSON("data/lessons/" + lesson + ".json", function(dat) {
 		panelData = dat;
-		categoryName = dat.Category;
 		renderNextPanel();
 	});
 
-	$("#lessonName").html(lessonName);
+	$("#lessonName").html(lesson);
 
 	$("#hintTrigger").click(function() {
 		alert($("#hint").html());
@@ -106,7 +103,7 @@ function renderProgressReport() {
 
 	// update the appData to reflect the score of the lesson taken
 	appData.completed.push({
-		Category: categoryName,
+		Category: lesson,
 		Score: finalScore
 	});
 	window.localStorage.setItem("appData", JSON.stringify(appData));

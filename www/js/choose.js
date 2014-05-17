@@ -1,5 +1,6 @@
 $(document).on('pageshow', '#conversation-chooser', function() {
     var data = appData;
+    alert(data);
     var completed=[];
     for (i=0; i<data.available.length; i++) {
       var classname="ui-li-static ui-body-inherit";
@@ -18,7 +19,6 @@ $(document).on('pageshow', '#conversation-chooser', function() {
       li.append(p);
       li.addClass(classname);
       li.attr("data-filename", data.available[i].File);
-
       // if the level has been completed, then show a checkmark
       if(levelComplete(data.available[i].Category)) {
         var completed=$("<img>").attr("src", "img/success.png");
@@ -40,8 +40,10 @@ $(document).on('pageshow', '#conversation-chooser', function() {
 
 function levelComplete(catName) {
   for(j=0; j<appData.completed.length; j++) {
-    if(appData.completed[j].Category == catName) {
-      return true;
+    if (appData.completed[j].Category!=undefined) {
+      if(appData.completed[j].Category.toUpperCase() == catName.toUpperCase()) {
+        return true;
+      }
     }
   }
 

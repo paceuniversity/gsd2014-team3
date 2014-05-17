@@ -3,9 +3,12 @@ lesson = "",
 lessonName = "";
 var appData;
 
-$(function() {
+$(document).on('pageshow', '#index', function() {
   var appDataJSON = window.localStorage.getItem("appData");
-  if(appDataJSON == null) {
+  alert("another general alert. I hope you feel alerted.");
+  alert(appDataJSON);
+  if(appDataJSON == null || appDataJSON == undefined || String(appDataJSON) == "[object Object]") {
+    alert("branch1");
     appData = {
       available: [
         {Category: "Greetings", File: "greetings.json", Dictionary: "greetings.json", Max: 14, Description: "Learn to greet people!"},
@@ -25,8 +28,10 @@ $(function() {
     };
     window.localStorage.setItem("appData", JSON.stringify(appData));
   } else {
+    alert("branch2");
     appData = $.parseJSON(appDataJSON);
   }
+  alert(appData);
 });
 
 $(document).bind('mobileinit', function() {
