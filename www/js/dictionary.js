@@ -48,23 +48,24 @@ $(document).on('pageshow', '#dictionary', function() {
       }
       if (!isEnglish) {
         var h3=$("<h3></h3>").html(entries[i].kiswahili);
-        var pstrong=$("<p></p>").append("<strong></strong>").html(entries[i].english);
+        var pstrong=$("<p></p>").html(entries[i].english);
       }else {
         var h3=$("<h3></h3>").html(entries[i].english);
-        var pstrong=$("<p></p>").append("<strong></strong>").html(entries[i].kiswahili);
+        var pstrong=$("<p></p>").html(entries[i].kiswahili);
       }
       var audiv=$("<a></a>").attr("href", "#");
       audiv.addClass("ui-btn-right jqm-home audio");
       audiv.attr("data-filename", "data/audio/greetings/"+entries[i].audio);
-	  audiv.click(function() {
-		console.log($(this).attr("data-filename"));
-		var hintAudio = new Media($(this).attr("data-filename"));
-		hintAudio.play();
-	  });
+	    audiv.click(function() {
+		    console.log($(this).attr("data-filename"));
+		    var hintAudio = new Media($(this).attr("data-filename"));
+		    hintAudio.play();
+	    });
       var li=$("<li></li>");
-	  var wrapper=$("<div></div>");
+      var wrapper=$("<div></div>");
+      wrapper.addClass("def");
       wrapper.append(h3).append(pstrong);
-	  li.append(wrapper).append(audiv);
+	    li.append(wrapper).append(audiv);
       var p = $("<span></span>");
       if (entries[i].notes)
         p.html(entries[i].notes);
