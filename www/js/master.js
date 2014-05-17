@@ -3,7 +3,9 @@ lesson = "",
 lessonName = "";
 var appData;
 
-$(document).on('pageshow', '#index', function() {
+document.addEventListener("deviceReady", deviceReady, false);
+
+function deviceReady() {
   var appDataJSON = window.localStorage.getItem("appData");
   if(appDataJSON == null || appDataJSON == undefined || String(appDataJSON) == "[object Object]") {
     appData = {
@@ -27,25 +29,26 @@ $(document).on('pageshow', '#index', function() {
   } else {
     appData = $.parseJSON(appDataJSON);
   }
-  alert("testing exit button binding");
+  //alert("testing exit button binding");
   /*bind exit function*/
+  function onExitConfirm(button) {
+	  if (button == 2)
+		  navigator.app.exitApp();
+  }
+  
   function exitAppPopup() {
-    navigator.notification.confirm(
-          'Exit Jifunze Kiswahili?'
-        , function(button) {
-              if (button == 2) {
-                  navigator.app.exitApp();
-              }
-          }
-        , 'Exit'
-        , 'Keep Learning'
-    );
+	navigator.notification.confirm(
+		'Exit Jifunze Kiswahili?', 
+		onExitConfirm,
+		'Confirm exit',
+		'Exit,Keep Learning'
+	);
     return false;
   }
-  alert("exitapppopup function exists");
+ // alert("exitapppopup function exists");
   $("#ebutton").on('click', exitAppPopup());
-  alert("after .on");
-});
+ // alert("after .on");
+}
 
 $(document).bind('mobileinit', function() {
 });
