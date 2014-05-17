@@ -1,15 +1,15 @@
 var videoPlayer;
 var answerScore = 0; // default is 4; decrements by 1 each time a user gets something wrong until zero
 var quizCount = 0, lessonScore = 0, panelCount = 0;
-var panelData, myaudio;
-	
+var panelData, myaudio, categoryName;
+
 // TODO: must be dynamic...
 var lesson = "sample";
 var lessonName = "Sample Quiz2";
 
 $(document).on('pageshow', '#quiz', function() {
 	renderLesson();
-	
+
 	$("#restart").click(function() {
 		if(confirm('Are you sure you want to restart this lesson?')) {
 			lessonScore = 0;
@@ -36,15 +36,16 @@ function renderLesson() {
 		- $("div[data-role=header]").height()
 		- $("#multiplechoicePanel").height();
 	$("#multimediaPanel").height(multimediaHeight);
-	
+
 	// load the conversation quiz data
 	$.getJSON("data/lessons/" + lesson + ".json", function(dat) {
 		panelData = dat;
+		categoryName = dat.Category;
 		renderNextPanel();
 	});
-	
+
 	$("#lessonName").html(lessonName);
-	
+
 	$("#hintTrigger").click(function() {
 		alert($("#hint").html());
 	});
@@ -52,7 +53,7 @@ function renderLesson() {
 		alert($("#translationText").html());
 	});
 }
-	
+
 function renderNextPanel() {
 	var newDat = {
 		lessonScore: lessonScore,
@@ -60,7 +61,7 @@ function renderNextPanel() {
 		panelCount: panelCount
 	};
 	window.localStorage.setItem(lesson + "_data", JSON.stringify(newDat));
-	
+
 	if(panelCount >= panelData.length) {
 		// lesson complete, redirect to progress report
 		renderProgressReport();
@@ -80,7 +81,7 @@ function renderNextPanel() {
 
 function renderProgressReport() {
 	$(".lesson-panel").hide();
-	
+
 	// calculate final score for this lesson
 	var lessonData = window.localStorage.getItem(lesson + "_data");
 	var lessonDataJSON = $.parseJSON(lessonData);
@@ -102,7 +103,14 @@ function renderProgressReport() {
 		report.addClass("avg-score-star-bad");
 		msg = "You should work on this level. Try again?";
 	}
-	
+
+	// update the appData to reflect the score of the lesson taken
+	appData.completed.push({
+		Category: categoryName,
+		Score: finalScore
+	});
+	window.localStorage.setItem("appData", JSON.stringify(appData));
+
 	// show score report to user
 	$(".avg-score-star div").html("<br><br>" + finalScore);
 	$("#progressMsg").html(msg);
@@ -118,43 +126,43 @@ function renderQuiz(data) {
 	// hide translation and continue buttons
 	$("#translation").fadeOut();
 	$("#continue").fadeOut();
-	
+
 	// show caption if defined
 	if(data.caption != undefined)
 		$(".caption").html(data.caption).fadeIn();
-		
+
 	// create the elements for the avatar
 	var avatar = $("<div></div>").addClass("avatar");
 	var eyebrows = $("<div></div>").addClass("eyebrows").addClass("up");
 	var mouth = $("<div></div>").addClass("mouth").addClass("smile");
 	var info = $("<div></div>").addClass("info").html("Tap to play.");
 	info.fadeIn();
-	
+
 	$("#multimediaPanel .media-container").html(avatar).append(info);
 	avatar.html(eyebrows).append(mouth);
-	
+
 	// when the avatar is clicked, replay the sound file
 	avatar.click(function() {
 		// reload the sound
 		myaudio = new Media("data/audio/" + data.audio + ".mp3");
 		myaudio.play();
 	});
-	
+
 	// if a hint is available, show the lightbulb and set the hint
 	if(data.hint != undefined)
 		$("#hint").html(data.hint);
-	
+
 	// if there are four different answers, the quiz type is multiple choice.
 	// otherwise, it is a direct answer (user types it in)
 	if(data.answers.length == 4) {
 		// randomize the answers array
 		var correct = data.answers[0]; // first answer is always correct
 		var answers = shuffle(data.answers);
-		
+
 		// place multiple choice answers
 		for(i=0; i<answers.length; i++)
 			$("#ans" + i).attr("href", (answers[i] == correct ? "#popupCorrect" : "#popupIncorrect")).html(answers[i]);
-		
+
 		// functions for multiple choice
 		$(".multiple-choice").off();
 		$(".multiple-choice").click(function() {
@@ -162,16 +170,16 @@ function renderQuiz(data) {
 			if($(this).attr("href") == "#popupCorrect") {
 				// answer is correct
 				alert('Correct!');
-				
+
 				mouth.removeClass().addClass("mouth").addClass("smile");
 				eyebrows.removeClass().addClass("eyebrows").addClass("up");
-				
+
 				renderNextPanel();
 			} else {
 				// the answer was incorrect; decrement score and make avatar angrier
 				alert('Sorry, that\'s not correct.');
 				answerScore--;
-				
+
 				// change eyebrows and/or mouth to make avatar look upset
 				if(answerScore == 3)
 					mouth.removeClass().addClass("mouth").addClass("frown");
@@ -181,7 +189,7 @@ function renderQuiz(data) {
 					renderNextPanel();
 			}
 		});
-	
+
 		$("#sentencewritingPanel").fadeOut();
 		$("#multiplechoicePanel").fadeIn();
 	} else {
@@ -191,22 +199,22 @@ function renderQuiz(data) {
 				// answer is correct! make avatar happy
 				mouth.removeClass().addClass("mouth").addClass("smile");
 				eyebrows.removeClass().addClass("eyebrows").addClass("up");
-				
+
 				alert('Correct!');
 				renderNextPanel();
 			} else {
 				// the answer was incorrect; decrement score and make avatar angrier
 				answerScore--;
-				
+
 				// change eyebrows and/or mouth to make avatar look upset
 				if(answerScore == 3) {
 					mouth.removeClass().addClass("mouth").addClass("frown");
-					
+
 					// show incorrect popup and number of attempts remaining (2)
 					alert('Sorry, that\'s not correct.');
 				} else if(answerScore == 2) {
 					eyebrows.removeClass().addClass("eyebrows").addClass("down");
-					
+
 					// show incorrect popup and number of attempts remaining (2)
 					alert('Sorry, that\'s not correct.');
 				} else if(answerScore == 1) {
@@ -216,11 +224,11 @@ function renderQuiz(data) {
 				}
 			}
 		});
-		
+
 		$("#multiplechoicePanel").fadeOut();
 		$("#sentencewritingPanel").fadeIn();
 	}
-	
+
 	// resize the height of the media container to be a square
 	$(".media-container").height($(".media-container").width());
 
@@ -262,16 +270,16 @@ function renderLecture(data) {
 	} else {
 		// avatar will speak to user
 		caption = data.caption;
-		
+
 		var avatar = $("<div></div>").addClass("avatar");
 		var eyebrows = $("<div></div>").addClass("eyebrows").addClass("up");
 		var mouth = $("<div></div>").addClass("mouth").addClass("smile");
 		var info = $("<div></div>").addClass("info").html("Tap to play.");
 		info.fadeIn();
-		
+
 		$("#multimediaPanel .media-container").html(avatar).append(info);
 		avatar.html(eyebrows).append(mouth);
-		
+
 		// when the avatar is clicked, replay the sound file
 		avatar.click(function() {
 			// load the sound
@@ -284,18 +292,18 @@ function renderLecture(data) {
 
 	// resize the height of the media container to be a square
 	$(".media-container").height($(".media-container").width());
-	
+
 	// show caption
 	$(".caption").html(caption).show();
 
 	// hide sentence writing panel and multiple choice
 	$("#multiplechoicePanel").fadeOut();
 	$("#sentencewritingPanel").fadeOut();
-	
+
 	// show translation and continue buttons
 	$("#translation").fadeIn();translationText
 	$("#continuePanel").fadeIn();
-	
+
 	// append next click event to continue button
 	$("#continue").click(function() {
 		$(this).off();
@@ -306,7 +314,7 @@ function renderLecture(data) {
 	$("a[data-rel=dialog]").click(function() {
 		$("#dialog").dialog();
 	});
-	
+
 	$("#translationText").html("English: " + data.english);
 	quizCount++;
 }

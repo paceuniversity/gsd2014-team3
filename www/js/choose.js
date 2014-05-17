@@ -1,5 +1,5 @@
 $(document).on('pageshow', '#conversation-chooser', function() {
-  $.getJSON("data/master.json", function(data) {
+    var data = appData;
     var completed=[];
     for (i=0; i<data.available.length; i++) {
       var classname="ui-li-static ui-body-inherit";
@@ -18,6 +18,14 @@ $(document).on('pageshow', '#conversation-chooser', function() {
       li.append(p);
       li.addClass(classname);
       li.attr("data-filename", data.available[i].File);
+
+      // if the level has been completed, then show a checkmark
+      if(levelComplete(data.available[i].Category)) {
+        var completed=$("<img>").attr("src", "img/success.png");
+        completed.addClass("ui-btn-right jqm-home");
+        li.append(completed);
+      }
+
       //where we store the filename for the JSON
       li.attr("id", data.available[i].Category);
       li.click(function(){
@@ -28,5 +36,14 @@ $(document).on('pageshow', '#conversation-chooser', function() {
       });
       $("#catlist").append(li);
     }
-  });
 });
+
+function levelComplete(catName) {
+  for(j=0; j<appData.completed.length; j++) {
+    if(appData.completed[j].Category == catName) {
+      return true;
+    }
+  }
+
+  return false;
+}
