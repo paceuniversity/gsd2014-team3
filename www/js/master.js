@@ -27,6 +27,22 @@ $(document).on('pageshow', '#index', function() {
   } else {
     appData = $.parseJSON(appDataJSON);
   }
+
+  /*bind exit function*/
+  function exitAppPopup() {
+    navigator.notification.confirm(
+          'Exit Jifunze Kiswahili?'
+        , function(button) {
+              if (button == 2) {
+                  navigator.app.exitApp();
+              }
+          }
+        , 'Exit'
+        , 'Keep Learning'
+    );
+    return false;
+  }
+  $("#ebutton").on('click', exitAppPopup());
 });
 
 $(document).bind('mobileinit', function() {
